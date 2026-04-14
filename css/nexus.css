@@ -116,9 +116,6 @@ nav {
   grid-gap: 85px;
 }
 
-.nav-left {
-  font-size: 36px;
-}
 .nav-left .logo-button {
   display: flex;
   margin-right: 10px;
@@ -131,14 +128,21 @@ nav {
   max-width: 5.5rem;
   width: 100%;
 }
+.nav-left .pp {
+  font-family: "Railway";
+  margin-top: 0;
+  text-align: center;
+  font-size: 12px;
+}
 .nav-left .title {
   margin: auto;
   text-align: center;
+  font-size: 36px;
 }
 .nav-left .motto {
   margin: auto;
   font-family: "Railway";
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 
