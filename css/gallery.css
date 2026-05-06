@@ -121,7 +121,7 @@ nav {
   margin-top: 7px;
   margin-bottom: auto;
   margin-right: 10px;
-  margin-left: 30px;
+  margin-left: 5vw;
 }
 .nav-left .logo-button :hover {
   filter: opacity(0.75);
