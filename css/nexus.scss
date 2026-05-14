@@ -72,6 +72,7 @@ element {
 .emoticon {
     font-size: 36px;
     margin: auto;
+    margin-top: 16px;
 }
 
 .links-area {
@@ -115,7 +116,8 @@ hr {
 
             :hover {
                 background-color: transparent;
-
+                transform: scale(1.05);
+                transition: all 0.5s;
             }
         }
     }
@@ -155,6 +157,7 @@ hr {
     max-height: 150px;
     height: 100%;
     padding: 1.5rem;
+    transition: all 0.5s;
 }
 
 micro {
