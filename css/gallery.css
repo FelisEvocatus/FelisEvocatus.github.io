@@ -109,19 +109,24 @@ body.no-scroll {
 nav {
   position: relative;
   background-color: crimson;
-  display: flex;
+  display: grid;
   align-items: center;
   padding: 0 2.65rem;
   height: 115px;
-  grid-gap: 85px;
+  grid-template-areas: "a b b";
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.nav-left {
+  grid-area: a;
+  justify-content: center;
+}
 .nav-left .logo-button {
   display: flex;
   margin-top: 7px;
   margin-bottom: auto;
   margin-right: 10px;
-  margin-left: 5vw;
+  margin-left: -20px;
 }
 .nav-left .logo-button :hover {
   filter: opacity(0.75);
@@ -144,6 +149,10 @@ nav {
   text-align: center;
   font-size: 36px;
   word-break: normal;
+}
+
+.nav-right {
+  grid-area: b;
 }
 
 .navigation-wrapper {
@@ -200,7 +209,6 @@ footer {
   width: 100%;
   z-index: 100;
   background-color: crimson;
-  text-align: center;
   align-self: center;
 }
 
@@ -210,6 +218,7 @@ footer {
   font-size: 18px;
   font-weight: bold;
   margin: auto;
+  text-align: center;
 }
 
 nav::after,
@@ -282,12 +291,24 @@ dec {
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
 }
 
+@media only screen and (max-width: 1500px) {
+  nav {
+    grid-template-areas: "a b" !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .grid-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  }
+}
 @media only screen and (min-width: 1000px) {
   * {
     cursor: none;
   }
 }
 @media only screen and (max-width: 1000px) {
+  nav {
+    grid-template-areas: "b b" !important;
+  }
   .logo,
   .cursor,
   .title,
@@ -321,39 +342,32 @@ dec {
     background-color: rgba(0, 0, 0, 0);
   }
 }
-gallery {
-  margin-top: auto;
+.gallery {
   display: flex;
-  position: relative;
   margin: auto;
-  max-width: 80rem;
-  width: 100%;
-  padding: 3rem 4rem 15rem 4rem;
+  padding: 4rem;
   align-items: center;
   box-sizing: border-box;
+  max-width: 1200px;
 }
-gallery grid-gallery {
+.gallery .grid-gallery {
   position: relative;
   padding: 2rem;
   display: grid;
   margin: auto;
-  width: 100%;
   gap: 50px;
-  justify-content: center;
-  grid-auto-columns: 200px;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   background: rgba(255, 255, 255, 0.5);
-  border-width: 3px 0px;
+  border-width: 3px 1px;
   border-color: crimson;
   border-style: solid;
   border-radius: 10px;
-  box-sizing: border-box;
 }
-gallery grid-gallery :hover {
+.gallery .grid-gallery :hover {
   border-top-left-radius: 0rem;
   border-bottom-right-radius: 0rem;
 }
-gallery grid-gallery a {
+.gallery .grid-gallery a {
   display: flex;
   align-self: center;
   align-items: center;
@@ -362,12 +376,12 @@ gallery grid-gallery a {
   border-bottom-right-radius: 6rem;
   transition: all 0.5s;
 }
-gallery grid-gallery a img {
+.gallery .grid-gallery a img {
   width: 100%;
   transition: all 0.5s;
   isolation: isolate;
 }
-gallery grid-gallery a :hover {
-  transform: scale(1.05);
+.gallery .grid-gallery a :hover {
+  transform: scale(1.025);
   transition: all 0.5s;
 }

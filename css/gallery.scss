@@ -7,33 +7,26 @@
 
 $transition-img: all 0.5s;
 
-gallery {
-    margin-top: auto;
+.gallery {
     display: flex;
-    position: relative;
     margin: auto;
-    max-width: 80rem;
-    width: 100%;
-    padding: 3rem 4rem 15rem 4rem;
+    padding: 4rem;
     align-items: center;
     box-sizing: border-box;
+    max-width: 1200px;
 
-    grid-gallery {
+    .grid-gallery {
         position: relative;
         padding: 2rem;
         display: grid;
         margin: auto;
-        width: 100%;
         gap: 50px;
-        justify-content: center;
-        grid-auto-columns: 200px;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
         background: rgba(255, 255, 255, 0.5);
-        border-width: 3px 0px;
+        border-width: 3px 1px;
         border-color: $main_colour;
         border-style: solid;
         border-radius: 10px;
-        box-sizing: border-box;
 
         :hover {
             border-top-left-radius: 0rem;
@@ -56,7 +49,7 @@ gallery {
             }
 
             :hover {
-                transform: scale(1.05);
+                transform: scale(1.025);
                 transition: $transition-img;
             }
         }

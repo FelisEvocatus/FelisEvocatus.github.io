@@ -3,21 +3,25 @@
 nav {
     position: relative;
     background-color: $main_colour;
-    display: flex;
+    display: grid;
     align-items: center;
     padding: 0 $distance+$width;
     height: 115px;
-    grid-gap: 85px;
+    grid-template-areas:
+        "a b b";
+    grid-template-columns: repeat(3, minmax(0, 1fr))
 }
 
 .nav-left {
+    grid-area: a;
+    justify-content: center;
 
     .logo-button {
         display: flex;
         margin-top: 7px;
         margin-bottom: auto;
         margin-right: 10px;
-        margin-left: 5vw;
+        margin-left: -20px;
 
         :hover {
             filter: opacity(0.75);
@@ -45,6 +49,10 @@ nav {
         font-size: 36px;
         word-break: normal;
     }
+}
+
+.nav-right {
+    grid-area: b
 }
 
 .navigation-wrapper {
@@ -109,7 +117,6 @@ footer {
     width: 100%;
     z-index: 100;
     background-color: $main_colour;
-    text-align: center;
     align-self: center;
 }
 
@@ -119,7 +126,9 @@ footer {
     font-size: 18px;
     font-weight: bold;
     margin: auto;
+    text-align: center;
 }
+
 
 nav::after,
 footer:after {

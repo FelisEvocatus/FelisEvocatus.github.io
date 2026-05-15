@@ -109,19 +109,24 @@ body.no-scroll {
 nav {
   position: relative;
   background-color: crimson;
-  display: flex;
+  display: grid;
   align-items: center;
   padding: 0 2.65rem;
   height: 115px;
-  grid-gap: 85px;
+  grid-template-areas: "a b b";
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.nav-left {
+  grid-area: a;
+  justify-content: center;
+}
 .nav-left .logo-button {
   display: flex;
   margin-top: 7px;
   margin-bottom: auto;
   margin-right: 10px;
-  margin-left: 5vw;
+  margin-left: -20px;
 }
 .nav-left .logo-button :hover {
   filter: opacity(0.75);
@@ -144,6 +149,10 @@ nav {
   text-align: center;
   font-size: 36px;
   word-break: normal;
+}
+
+.nav-right {
+  grid-area: b;
 }
 
 .navigation-wrapper {
@@ -200,7 +209,6 @@ footer {
   width: 100%;
   z-index: 100;
   background-color: crimson;
-  text-align: center;
   align-self: center;
 }
 
@@ -210,6 +218,7 @@ footer {
   font-size: 18px;
   font-weight: bold;
   margin: auto;
+  text-align: center;
 }
 
 nav::after,
@@ -282,12 +291,24 @@ dec {
   background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
 }
 
+@media only screen and (max-width: 1500px) {
+  nav {
+    grid-template-areas: "a b" !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .grid-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  }
+}
 @media only screen and (min-width: 1000px) {
   * {
     cursor: none;
   }
 }
 @media only screen and (max-width: 1000px) {
+  nav {
+    grid-template-areas: "b b" !important;
+  }
   .logo,
   .cursor,
   .title,
@@ -327,14 +348,13 @@ dec {
   grid-template-areas: "a a" "b c";
   max-width: 70rem;
   width: 100%;
-  padding: 3rem 4rem 15rem 4rem;
+  padding: 4rem;
   gap: 1rem;
   justify-content: stretch;
   align-items: stretch;
   background: rgba(255, 0, 0, 0);
   box-sizing: border-box;
   margin: auto;
-  border-radius: 1rem;
 }
 
 element {
@@ -371,6 +391,7 @@ element {
   color: black;
   padding: 1rem 0;
   box-sizing: border-box;
+  align-content: center;
 }
 .text-area p {
   padding: 0 2rem;
@@ -383,8 +404,7 @@ element {
 
 .emoticon {
   font-size: 36px;
-  margin: auto;
-  margin-top: 16px;
+  margin: 20px 0 20px 0;
 }
 
 .links-area {
