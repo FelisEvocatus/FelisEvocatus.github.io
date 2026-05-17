@@ -13,16 +13,16 @@
 
 .hover,
 .hover-gallery {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   background: rgb(220, 20, 60) !important;
   mix-blend-mode: difference;
   border: 0px !important;
 }
 
 .hover-gallery {
-  width: 90px;
-  height: 90px;
+  width: 120px;
+  height: 120px;
 }
 
 @keyframes click {

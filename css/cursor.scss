@@ -1,7 +1,7 @@
 @use "./partials/variables.scss" as *;
 
 $cursor: 12px;
-$cursor-b: 60px;
+$cursor-hover: 80px;
 
 .cursor {
     position: fixed;
@@ -18,16 +18,16 @@ $cursor-b: 60px;
 
 .hover,
 .hover-gallery {
-    width: $cursor-b;
-    height: $cursor-b;
+    width: $cursor-hover;
+    height: $cursor-hover;
     background: rgb(220, 20, 60) !important;
     mix-blend-mode: difference;
     border: 0px !important;
 }
 
 .hover-gallery {
-    width: $cursor-b*1.5;
-    height: $cursor-b*1.5;
+    width: $cursor-hover*1.5;
+    height: $cursor-hover*1.5;
 }
 
 @keyframes click {

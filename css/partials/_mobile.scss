@@ -16,24 +16,22 @@
 
 @media only screen and (min-width: 1000px) {
     * {
-        cursor: none;
+        cursor: none !important;
     }
 }
 
 
 @media only screen and (max-width: 1000px) {
 
+    .cursor,
+    .title,
+    .nav-left {
+        display: none !important;
+    }
+
     nav {
         grid-template-areas:
             "b b" !important;
-    }
-
-    .logo,
-    .cursor,
-    .title,
-    .motto,
-    .nav-left {
-        display: none !important;
     }
 
     .navigation-wrapper,
@@ -42,6 +40,19 @@
 
         a {
             width: 100% !important;
+        }
+    }
+
+    .navigation-wrapper {
+        .navigation-buttons-wrapper {
+            a {
+                background-color: transparent !important;
+            }
+
+            a:hover {
+                background-color: $secondary_colour !important;
+
+            }
         }
     }
 
@@ -58,21 +69,32 @@
             "c" !important;
     }
 
-    .sm-grid_1 {
+    .sm-grid {
         grid-template-areas:
-            "a b" !important;
-    }
+            "a b c" !important;
+        padding: 1.5rem !important;
+        gap: 1.5rem !important;
 
-    hr {
-        margin-top: 0.4rem;
-        margin-bottom: 0.4rem;
-    }
-
-    .navigation-wrapper {
-        .navigation-buttons-wrapper {
+        div {
             a {
-                background-color: rgba($tetriary_colour, 0);
+                margin: 0 !important;
             }
         }
+    }
+}
+
+@media only screen and (max-width: 830px) {
+
+    .sm-grid {
+        grid-template-areas:
+            "a a" "b c" !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .sm-grid {
+        grid-template-areas:
+            "a" "b" "c" !important;
     }
 }

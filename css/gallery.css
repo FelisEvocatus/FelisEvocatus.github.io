@@ -3,8 +3,12 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
-  scrollbar-color: transparent transparent;
+  scrollbar-color: crimson black;
   text-decoration: none;
+  -ms-overflow-style: none;
+}
+html ::-webkit-scrollbar {
+  display: none;
 }
 
 body {
@@ -302,19 +306,17 @@ dec {
 }
 @media only screen and (min-width: 1000px) {
   * {
-    cursor: none;
+    cursor: none !important;
   }
 }
 @media only screen and (max-width: 1000px) {
-  nav {
-    grid-template-areas: "b b" !important;
-  }
-  .logo,
   .cursor,
   .title,
-  .motto,
   .nav-left {
     display: none !important;
+  }
+  nav {
+    grid-template-areas: "b b" !important;
   }
   .navigation-wrapper,
   .navigation-buttons-wrapper {
@@ -324,6 +326,12 @@ dec {
   .navigation-buttons-wrapper a {
     width: 100% !important;
   }
+  .navigation-wrapper .navigation-buttons-wrapper a {
+    background-color: transparent !important;
+  }
+  .navigation-wrapper .navigation-buttons-wrapper a:hover {
+    background-color: white !important;
+  }
   .text-area,
   .emoticon {
     font-size: 24px !important;
@@ -332,15 +340,23 @@ dec {
     gap: 2rem !important;
     grid-template-areas: "a" "b" "c" !important;
   }
-  .sm-grid_1 {
-    grid-template-areas: "a b" !important;
+  .sm-grid {
+    grid-template-areas: "a b c" !important;
+    padding: 1.5rem !important;
+    gap: 1.5rem !important;
   }
-  hr {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
+  .sm-grid div a {
+    margin: 0 !important;
   }
-  .navigation-wrapper .navigation-buttons-wrapper a {
-    background-color: rgba(0, 0, 0, 0);
+}
+@media only screen and (max-width: 830px) {
+  .sm-grid {
+    grid-template-areas: "a a" "b c" !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .sm-grid {
+    grid-template-areas: "a" "b" "c" !important;
   }
 }
 .gallery {
@@ -356,7 +372,7 @@ dec {
   padding: 2rem;
   display: grid;
   margin: auto;
-  gap: 50px;
+  gap: 2rem;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   background: rgba(255, 255, 255, 0.5);
   border-width: 3px 1px;
