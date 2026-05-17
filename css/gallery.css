@@ -301,7 +301,7 @@ dec {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
   .grid-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)) !important;
   }
 }
 @media only screen and (min-width: 1000px) {
@@ -365,7 +365,7 @@ dec {
   padding: 4rem;
   align-items: center;
   box-sizing: border-box;
-  max-width: 1200px;
+  max-width: 1500px;
 }
 .gallery .grid-gallery {
   position: relative;
@@ -373,7 +373,7 @@ dec {
   display: grid;
   margin: auto;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(512px, 1fr));
   background: rgba(255, 255, 255, 0.5);
   border-width: 3px 1px;
   border-color: crimson;
