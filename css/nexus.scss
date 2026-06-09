@@ -89,15 +89,16 @@ hr {
 }
 
 .sm-grid {
+    position: relative;
     display: grid;
     width: 100%;
     padding: 1.5rem;
     gap: 1.5rem;
     box-sizing: border-box;
     grid-template-areas:
-        "a"
-        "b"
-        "c";
+        "a a"
+        "b b"
+        "c d";
 
     div {
 
@@ -116,7 +117,6 @@ hr {
             border-style: solid;
             border-radius: 10px;
             transition: $transition;
-            margin: 0 1rem;
 
             :hover {
                 background-color: transparent;

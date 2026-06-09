@@ -71,7 +71,7 @@
 
     .sm-grid {
         grid-template-areas:
-            "a b c" !important;
+            "a b" "c d" !important;
         padding: 1.5rem !important;
         gap: 1.5rem !important;
 
@@ -87,7 +87,7 @@
 
     .sm-grid {
         grid-template-areas:
-            "a a" "b c" !important;
+            "a a" "b b" "c d" !important;
     }
 }
 
@@ -95,6 +95,6 @@
 
     .sm-grid {
         grid-template-areas:
-            "a" "b" "c" !important;
+            "a" "b" "c" "d" !important;
     }
 }

@@ -341,7 +341,7 @@ dec {
     grid-template-areas: "a" "b" "c" !important;
   }
   .sm-grid {
-    grid-template-areas: "a b c" !important;
+    grid-template-areas: "a b" "c d" !important;
     padding: 1.5rem !important;
     gap: 1.5rem !important;
   }
@@ -351,12 +351,12 @@ dec {
 }
 @media only screen and (max-width: 830px) {
   .sm-grid {
-    grid-template-areas: "a a" "b c" !important;
+    grid-template-areas: "a a" "b b" "c d" !important;
   }
 }
 @media only screen and (max-width: 600px) {
   .sm-grid {
-    grid-template-areas: "a" "b" "c" !important;
+    grid-template-areas: "a" "b" "c" "d" !important;
   }
 }
 .grid {
@@ -439,12 +439,13 @@ hr {
 }
 
 .sm-grid {
+  position: relative;
   display: grid;
   width: 100%;
   padding: 1.5rem;
   gap: 1.5rem;
   box-sizing: border-box;
-  grid-template-areas: "a" "b" "c";
+  grid-template-areas: "a a" "b b" "c d";
 }
 .sm-grid div :hover {
   background-color: crimson;
@@ -460,7 +461,6 @@ hr {
   border-style: solid;
   border-radius: 10px;
   transition: 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
-  margin: 0 1rem;
 }
 .sm-grid div a :hover {
   background-color: transparent;
