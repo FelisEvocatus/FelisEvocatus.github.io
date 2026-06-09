@@ -48,18 +48,19 @@ body {
 }
 
 .img-gear {
-  position: relative;
-  width: 100%;
-  opacity: 0.05;
-  animation: rotate-TL 180s linear infinite;
+  top: 25rem;
+  position: absolute;
+  width: 70%;
+  opacity: 0.1;
+  animation: rotate-TL 360s linear infinite;
 }
 
 @keyframes rotate-TL {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(30deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(390deg);
   }
 }
 body:before {
@@ -68,7 +69,7 @@ body:before {
   content: "";
   height: 300%;
   left: -50%;
-  opacity: 0.5;
+  opacity: 0.45;
   position: fixed;
   top: -110%;
   width: 300%;
@@ -300,9 +301,6 @@ dec {
     grid-template-areas: "a b" !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
-  .grid-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)) !important;
-  }
 }
 @media only screen and (min-width: 1000px) {
   * {
@@ -348,6 +346,22 @@ dec {
   .sm-grid div a {
     margin: 0 !important;
   }
+  .img-gear {
+    top: 50rem !important;
+    left: 15rem;
+    width: 50% !important;
+  }
+  /*Gallery*/
+  .gallery {
+    padding: 5rem !important;
+  }
+  .grid-gallery a {
+    margin-bottom: 2rem !important;
+  }
+  .column {
+    flex: 100% !important;
+    max-width: 100% !important;
+  }
 }
 @media only screen and (max-width: 830px) {
   .sm-grid {
@@ -365,43 +379,46 @@ dec {
   padding: 4rem;
   align-items: center;
   box-sizing: border-box;
-  max-width: 1500px;
+  max-width: 1800px;
 }
 .gallery .grid-gallery {
   position: relative;
-  padding: 2rem;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 1rem 2rem;
   margin: auto;
-  gap: 2rem;
-  grid-template-columns: repeat(auto-fill, minmax(512px, 1fr));
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.8);
   border-width: 3px 1px;
   border-color: crimson;
   border-style: solid;
   border-radius: 10px;
 }
-.gallery .grid-gallery :hover {
+.gallery .grid-gallery a:hover {
   border-top-left-radius: 0rem;
   border-bottom-right-radius: 0rem;
 }
 .gallery .grid-gallery a:hover img {
-  transform: scale(1.01);
+  transform: scale(1.005);
   transition: all 0.5s;
 }
 .gallery .grid-gallery a {
   display: flex;
-  align-self: center;
-  align-items: center;
   overflow: hidden;
-  border-top-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
+  border-top-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
   transition: all 0.5s;
-  border-width: 0;
-  border-style: solid;
-  border-color: black;
+  margin-bottom: 1rem;
 }
 .gallery .grid-gallery a img {
   width: 100%;
   transition: all 0.5s;
   isolation: isolate;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.column {
+  flex: 45%;
+  max-width: 50%;
+  margin: 0 0.5rem;
 }

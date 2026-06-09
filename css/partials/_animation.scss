@@ -7,19 +7,20 @@
 }
 
 .img-gear {
-    position: relative;
-    width: 100%;
-    opacity: 0.05;
-    animation: rotate-TL 180s linear infinite;
+    top: 25rem;
+    position: absolute;
+    width: 70%;
+    opacity: 0.1;
+    animation: rotate-TL 360s linear infinite;
 }
 
 @keyframes rotate-TL {
     0% {
-        transform: rotate(0deg);
+        transform: rotate(30deg);
     }
 
     100% {
-        transform: rotate(360deg);
+        transform: rotate(390deg);
     }
 }
 
@@ -32,7 +33,7 @@ body {
         content: "";
         height: 300%;
         left: -50%;
-        opacity: 0.5;
+        opacity: 0.45;
         position: fixed;
         top: -110%;
         width: 300%;

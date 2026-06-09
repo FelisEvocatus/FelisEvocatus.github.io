@@ -48,18 +48,19 @@ body {
 }
 
 .img-gear {
-  position: relative;
-  width: 100%;
-  opacity: 0.05;
-  animation: rotate-TL 180s linear infinite;
+  top: 25rem;
+  position: absolute;
+  width: 70%;
+  opacity: 0.1;
+  animation: rotate-TL 360s linear infinite;
 }
 
 @keyframes rotate-TL {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(30deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(390deg);
   }
 }
 body:before {
@@ -68,7 +69,7 @@ body:before {
   content: "";
   height: 300%;
   left: -50%;
-  opacity: 0.5;
+  opacity: 0.45;
   position: fixed;
   top: -110%;
   width: 300%;
@@ -300,9 +301,6 @@ dec {
     grid-template-areas: "a b" !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
-  .grid-gallery {
-    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)) !important;
-  }
 }
 @media only screen and (min-width: 1000px) {
   * {
@@ -348,6 +346,22 @@ dec {
   .sm-grid div a {
     margin: 0 !important;
   }
+  .img-gear {
+    top: 50rem !important;
+    left: 15rem;
+    width: 50% !important;
+  }
+  /*Gallery*/
+  .gallery {
+    padding: 5rem !important;
+  }
+  .grid-gallery a {
+    margin-bottom: 2rem !important;
+  }
+  .column {
+    flex: 100% !important;
+    max-width: 100% !important;
+  }
 }
 @media only screen and (max-width: 830px) {
   .sm-grid {
@@ -377,7 +391,6 @@ element {
   position: relative;
   text-align: center;
   width: 100%;
-  background: rgba(255, 255, 255, 0);
   border-width: 3px 1px;
   border-color: crimson;
   border-style: solid;
