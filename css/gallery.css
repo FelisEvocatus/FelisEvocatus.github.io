@@ -226,7 +226,7 @@ footer {
 }
 
 nav::after,
-footer:after {
+footer::after {
   content: "";
   position: absolute;
   left: 0;
@@ -384,21 +384,24 @@ dec {
   border-top-left-radius: 0rem;
   border-bottom-right-radius: 0rem;
 }
+.gallery .grid-gallery a:hover img {
+  transform: scale(1.01);
+  transition: all 0.5s;
+}
 .gallery .grid-gallery a {
   display: flex;
   align-self: center;
   align-items: center;
   overflow: hidden;
-  border-top-left-radius: 4rem;
-  border-bottom-right-radius: 4rem;
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
   transition: all 0.5s;
+  border-width: 0;
+  border-style: solid;
+  border-color: black;
 }
 .gallery .grid-gallery a img {
   width: 100%;
   transition: all 0.5s;
   isolation: isolate;
-}
-.gallery .grid-gallery a :hover {
-  transform: scale(1.02);
-  transition: all 0.5s;
 }

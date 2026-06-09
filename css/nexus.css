@@ -226,7 +226,7 @@ footer {
 }
 
 nav::after,
-footer:after {
+footer::after {
   content: "";
   position: absolute;
   left: 0;
@@ -452,6 +452,11 @@ hr {
   border-color: black;
   border-radius: 30px;
 }
+.sm-grid div a:hover img {
+  background-color: transparent;
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
 .sm-grid div a {
   display: flex;
   align-items: center;
@@ -461,11 +466,6 @@ hr {
   border-style: solid;
   border-radius: 10px;
   transition: 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-.sm-grid div a :hover {
-  background-color: transparent;
-  transform: scale(1.05);
-  transition: all 0.5s;
 }
 
 .smg-a {

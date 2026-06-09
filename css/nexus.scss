@@ -108,6 +108,15 @@ hr {
             border-radius: 30px;
         }
 
+        a:hover {
+            img {
+                background-color: transparent;
+                transform: scale(1.05);
+                transition: all 0.5s;
+            }
+        }
+
+
         a {
             display: flex;
             align-items: center;
@@ -117,12 +126,6 @@ hr {
             border-style: solid;
             border-radius: 10px;
             transition: $transition;
-
-            :hover {
-                background-color: transparent;
-                transform: scale(1.05);
-                transition: all 0.5s;
-            }
         }
     }
 }

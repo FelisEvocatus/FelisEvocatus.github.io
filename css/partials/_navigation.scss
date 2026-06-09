@@ -131,7 +131,7 @@ footer {
 
 
 nav::after,
-footer:after {
+footer::after {
     content: "";
     position: absolute;
     left: 0;

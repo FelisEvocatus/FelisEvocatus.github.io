@@ -33,24 +33,32 @@ $transition-img: all 0.5s;
             border-bottom-right-radius: 0rem;
         }
 
+
+        a:hover {
+            img {
+                transform: scale(1.01);
+                transition: $transition-img;
+            }
+        }
+
         a {
             display: flex;
             align-self: center;
             align-items: center;
             overflow: hidden;
-            border-top-left-radius: 4rem;
-            border-bottom-right-radius: 4rem;
+            border-top-left-radius: 3rem;
+            border-bottom-right-radius: 3rem;
             transition: $transition-img;
+
+            border-width: 0;
+            border-style: solid;
+            border-color: black;
 
             img {
                 width: 100%;
                 transition: $transition-img;
                 isolation: isolate;
-            }
 
-            :hover {
-                transform: scale(1.02);
-                transition: $transition-img;
             }
         }
     }
