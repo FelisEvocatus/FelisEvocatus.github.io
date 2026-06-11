@@ -297,6 +297,8 @@ dec {
   }
 }
 @media only screen and (max-width: 1000px) {
+  .div-gear,
+  .img-gear,
   body:before,
   .cursor,
   .title,
