@@ -22,6 +22,7 @@
     .gear_1,
     .gear_2 {
         background-image: url(../images/Cogwheel_smol.webp) !important;
+        animation: rotate-TL 180s linear infinite !important;
     }
 
     .gear_1 {

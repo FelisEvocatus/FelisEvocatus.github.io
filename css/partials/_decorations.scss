@@ -7,47 +7,66 @@ dec {
     z-index: 1000;
 }
 
-.dec-left_1 {
+.dec_left_1 {
     left: $distance;
 
 }
 
-.dec-left_2 {
+.dec_left_2 {
     left: $distance - $margin;
     width: $width + 0.5rem;
 }
 
-.dec-right_1 {
+.dec_right_1 {
     right: $distance;
 }
 
-.dec-right_2 {
+.dec_right_2 {
     right: $distance - $margin;
     width: $width + 0.5rem;
 }
 
-.dec-n {
+.dec_n {
     top: 0;
     height: 7.5rem;
 }
 
-.dec-f {
+.dec_f {
     bottom: 0;
-    height: 3.3rem !important;
+    height: 3.3rem;
 }
 
-.dec-v {
-    top: 115px;
-    height: 30rem !important;
-    z-index: -1000;
-    opacity: 0.1;
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
+$dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
+
+.dec_n_long::before,
+.dec_n_short::before,
+.dec_f_long::before,
+.dec_f_short::before {
+    content: "";
+    position: inherit;
+    width: 100%;
 }
 
-.dec-b {
-    bottom: 3rem;
-    height: 10rem !important;
-    z-index: -1000;
-    opacity: 0.1;
-    background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
+.dec_n_long::before {
+    background-image: linear-gradient(to bottom, $dec_gradient);
+    height: 30rem;
+    top: 7.5rem;
+}
+
+.dec_n_short::before {
+    background-image: linear-gradient(to bottom, $dec_gradient);
+    height: 20rem;
+    top: 7.5rem;
+}
+
+.dec_f_long::before {
+    background-image: linear-gradient(to top, $dec_gradient);
+    height: 30rem;
+    bottom: 3.3rem;
+}
+
+.dec_f_short::before {
+    background-image: linear-gradient(to top, $dec_gradient);
+    height: 20rem;
+    bottom: 3.3rem;
 }

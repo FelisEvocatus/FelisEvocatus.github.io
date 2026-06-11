@@ -128,10 +128,11 @@ nav {
   background-color: crimson;
   display: grid;
   align-items: center;
-  padding: 0 2.65rem;
+  padding: 0 3rem;
   height: 115px;
   grid-template-areas: "a b b";
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  z-index: 100;
 }
 
 .nav-left {
@@ -192,14 +193,14 @@ nav {
   display: flex;
   justify-content: center;
   position: relative;
-  text-decoration: inherit;
+  text-decoration: none;
   transition: 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
   color: white;
   min-width: 200px;
-  background-color: rgba(0, 0, 0, 0.05);
-}
-.navigation-wrapper .navigation-buttons-wrapper a .button-active {
-  filter: drop-shadow(0px 0px 5px orange) drop-shadow(0px 0px 6px rgba(255, 179, 0, 0.5)) drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.4));
+  border-left: 1px solid transparent;
+  -o-border-image: linear-gradient(to bottom, transparent, black);
+     border-image: linear-gradient(to bottom, transparent, black);
+  border-image-slice: 1;
 }
 .navigation-wrapper .navigation-buttons-wrapper a:hover {
   background-color: white;
@@ -208,9 +209,9 @@ nav {
   color: black;
   filter: none;
 }
-
-.button-active {
+.navigation-wrapper .navigation-buttons-wrapper .button-active p {
   text-decoration: underline !important;
+  filter: drop-shadow(0px 0px 5px orange) drop-shadow(0px 0px 6px rgba(255, 179, 0, 0.5)) drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.4));
 }
 
 .nav-button {
@@ -219,7 +220,7 @@ nav {
 }
 
 footer {
-  padding: 10px 2.65rem;
+  padding: 10px 3rem;
   height: 28px;
   margin-top: 0;
   position: relative;
@@ -238,74 +239,101 @@ footer {
   text-align: center;
 }
 
-nav::after,
-footer::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: black;
-  pointer-events: none;
+/*Additional borders*/
+nav {
+  border-bottom: 3px solid transparent;
+  -o-border-image: linear-gradient(to right, transparent, black, transparent);
+     border-image: linear-gradient(to right, transparent, black, transparent);
+  border-image-slice: 1;
 }
 
-nav::after {
-  bottom: 0;
+footer {
+  border-top: 3px solid transparent;
+  -o-border-image: linear-gradient(to right, transparent, black, transparent);
+     border-image: linear-gradient(to right, transparent, black, transparent);
+  border-image-slice: 1;
 }
 
-footer:after {
-  top: 0;
+/*
+footer::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(rgba(255, 254, 161), 0.5);
+    width: 70vw;
+    height: 20px;
+    margin-inline: auto;
+    clip-path: polygon(60vw 0, 70vw 60px, 0px 60px, 10vw 0);
+    left: 0;
+    right: 0;
+    bottom: 51px;
 }
-
+    */
 dec {
   position: absolute;
-  width: 0.75rem;
+  width: 0.9rem;
   background-color: black;
   z-index: 1000;
 }
 
-.dec-left_1 {
-  left: 1.9rem;
+.dec_left_1 {
+  left: 2.1rem;
 }
 
-.dec-left_2 {
-  left: 0.4rem;
-  width: 1.25rem;
+.dec_left_2 {
+  left: 0.35rem;
+  width: 1.4rem;
 }
 
-.dec-right_1 {
-  right: 1.9rem;
+.dec_right_1 {
+  right: 2.1rem;
 }
 
-.dec-right_2 {
-  right: 0.4rem;
-  width: 1.25rem;
+.dec_right_2 {
+  right: 0.35rem;
+  width: 1.4rem;
 }
 
-.dec-n {
+.dec_n {
   top: 0;
   height: 7.5rem;
 }
 
-.dec-f {
+.dec_f {
   bottom: 0;
-  height: 3.3rem !important;
+  height: 3.3rem;
 }
 
-.dec-v {
-  top: 115px;
-  height: 30rem !important;
-  z-index: -1000;
-  opacity: 0.1;
-  background: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
+.dec_n_long::before,
+.dec_n_short::before,
+.dec_f_long::before,
+.dec_f_short::before {
+  content: "";
+  position: inherit;
+  width: 100%;
 }
 
-.dec-b {
-  bottom: 3rem;
-  height: 10rem !important;
-  z-index: -1000;
-  opacity: 0.1;
-  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0)) !important;
+.dec_n_long::before {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  height: 30rem;
+  top: 7.5rem;
+}
+
+.dec_n_short::before {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  height: 20rem;
+  top: 7.5rem;
+}
+
+.dec_f_long::before {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  height: 30rem;
+  bottom: 3.3rem;
+}
+
+.dec_f_short::before {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
+  height: 20rem;
+  bottom: 3.3rem;
 }
 
 @media only screen and (max-width: 1500px) {
@@ -323,6 +351,7 @@ dec {
   .gear_1,
   .gear_2 {
     background-image: url(../images/Cogwheel_smol.webp) !important;
+    animation: rotate-TL 180s linear infinite !important;
   }
   .gear_1 {
     top: -75vw !important;
