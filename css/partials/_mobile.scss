@@ -19,8 +19,27 @@
 
 @media only screen and (max-width: 1000px) {
 
-    .div-gear,
-    .img-gear,
+    .gear_1,
+    .gear_2 {
+        background-image: url(../images/Cogwheel_smol.webp) !important;
+    }
+
+    .gear_1 {
+        top: -75vw !important;
+        left: -75vw !important;
+        width: 150vw !important;
+        height: 150vw !important;
+        background-size: 150vw !important;
+    }
+
+    .gear_2 {
+        bottom: -50vw !important;
+        right: -50vw !important;
+        width: 100vw !important;
+        height: 100vw !important;
+        background-size: 100vw !important;
+    }
+
     body:before,
     .cursor,
     .title,

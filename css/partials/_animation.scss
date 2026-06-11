@@ -1,17 +1,27 @@
-﻿.div-gear {
+﻿.gear_1,
+.gear_2 {
     position: fixed;
-    top: -110rem;
-    left: -75rem;
     z-index: -100;
-    width: 3500px;
+
+    background-image: url(../images/Cogwheel.webp);
+    animation: rotate-TL 360s linear infinite;
+    opacity: 0.1;
 }
 
-.img-gear {
-    top: 25rem;
-    position: absolute;
-    width: 70%;
-    opacity: 0.1;
-    animation: rotate-TL 360s linear infinite;
+.gear_1 {
+    top: -1024px;
+    left: -1024px;
+    width: 2048px;
+    height: 2048px;
+    background-size: 2048px;
+}
+
+.gear_2 {
+    bottom: -512px;
+    right: -512px;
+    width: 1024px;
+    height: 1024px;
+    background-size: 1024px;
 }
 
 @keyframes rotate-TL {
