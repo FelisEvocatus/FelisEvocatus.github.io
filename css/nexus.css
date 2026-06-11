@@ -20,17 +20,19 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  font-family: "SourceHanSerifKR";
 }
 
 @font-face {
-  font-family: "SourceHanSerifKR";
-  src: url(../fonts/hanserif/SourceHanSerifKR-Regular.otf);
-  font-style: normal;
+  font-family: "SourceHanSerif";
+  src: url(../fonts/sourcehanserif/SourceHanSerifKR-Light.ttf);
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "Norwester";
-  src: url(../fonts/norwester/Norwester.otf);
+  src: url(../fonts/norwester/norwester.otf);
   font-style: normal;
   font-weight: normal;
 }
@@ -229,7 +231,7 @@ footer {
 
 .copyright {
   color: white;
-  font-family: "SourceHanSerifKR";
+  font-family: "SourceHanSerif";
   font-size: 18px;
   font-weight: bold;
   margin: auto;
@@ -443,13 +445,14 @@ element {
 
 .text-area {
   grid-area: b;
-  font-family: "SourceHanSerifKR";
+  font-family: "SourceHanSerif";
   font-size: 20px;
   text-align: justify;
   color: black;
   padding: 1rem 0;
   box-sizing: border-box;
   align-content: center;
+  line-height: 1.8rem;
 }
 .text-area p {
   padding: 0 2rem;

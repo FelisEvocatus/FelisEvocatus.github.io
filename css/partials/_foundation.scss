@@ -21,18 +21,20 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: 'SourceHanSerifKR';
 }
 
 @font-face {
-    font-family: "SourceHanSerifKR";
-    src: url(../fonts/hanserif/SourceHanSerifKR-Regular.otf);
-    font-style: normal;
+    font-family: "SourceHanSerif";
+    src: url(../fonts/sourcehanserif/SourceHanSerifKR-Light.ttf);
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "Norwester";
-    src: url(../fonts/norwester/Norwester.otf);
+    src: url(../fonts/norwester/norwester.otf);
     font-style: normal;
     font-weight: normal;
 }

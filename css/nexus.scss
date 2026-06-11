@@ -48,13 +48,14 @@ element {
 
 .text-area {
     grid-area: b;
-    font-family: 'SourceHanSerifKR';
+    font-family: 'SourceHanSerif';
     font-size: 20px;
     text-align: justify;
     color: black;
     padding: 1rem 0;
     box-sizing: border-box;
     align-content: center;
+    line-height: 1.8rem;
 
     p {
         padding: 0 2rem;
