@@ -6,6 +6,7 @@ html {
     scrollbar-color: crimson black;
     text-decoration: none;
     -ms-overflow-style: none;
+    scroll-behavior: smooth !important;
 
     ::-webkit-scrollbar {
         display: none;
