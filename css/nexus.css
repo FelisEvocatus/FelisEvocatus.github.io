@@ -23,20 +23,8 @@ body {
 }
 
 @font-face {
-  font-family: "Norwester";
-  src: url(../fonts/norwester/norwester.otf);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Railway";
-  src: url(../fonts/railway/Railway.otf);
-  font-style: normal;
-  font-weight: normal;
-}
-@font-face {
-  font-family: "SourceHanSerifCN";
-  src: url(../fonts/hanserif/SourceHanSerifCN-Regular.ttf);
+  font-family: "SourceHanSerifKR";
+  src: url(../fonts/hanserif/SourceHanSerifKR-Regular.otf);
   font-style: normal;
   font-weight: normal;
 }
@@ -66,11 +54,11 @@ body {
 }
 body:before {
   animation: grain 8s steps(10) infinite;
-  background-image: url(../images/grain.png);
+  background-image: url(../images/grain.webp);
   content: "";
   height: 300%;
   left: -50%;
-  opacity: 0.45;
+  opacity: 0.4;
   position: fixed;
   top: -110%;
   width: 300%;
@@ -145,7 +133,7 @@ nav {
   transition: all 0.5s;
 }
 .nav-left .pp {
-  font-family: "Railway";
+  font-family: Railway;
   margin: 0;
   text-align: center;
   font-size: 14px;
@@ -165,7 +153,7 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
-  font-family: "Norwester";
+  font-family: Norwester;
   color: white;
   width: 100%;
   height: 100%;
@@ -220,7 +208,7 @@ footer {
 
 .copyright {
   color: white;
-  font-family: "SourceHanSerifCN";
+  font-family: "SourceHanSerifKR";
   font-size: 18px;
   font-weight: bold;
   margin: auto;
@@ -309,6 +297,7 @@ dec {
   }
 }
 @media only screen and (max-width: 1000px) {
+  body:before,
   .cursor,
   .title,
   .nav-left {
@@ -415,7 +404,7 @@ element {
 
 .text-area {
   grid-area: b;
-  font-family: "SourceHanSerifCN", "Times New Roman";
+  font-family: "SourceHanSerifKR";
   font-size: 20px;
   text-align: justify;
   color: black;
