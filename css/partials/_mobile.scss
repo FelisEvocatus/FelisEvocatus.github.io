@@ -1,14 +1,32 @@
 ﻿@use "./variables.scss" as *;
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1580px) {
 
     nav {
         grid-template-areas:
             "a b" !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important
     }
+
+    /*Gallery*/
+    .gallery-link,
+    .refresher-line-wrapper {
+        max-width: 2048px !important;
+    }
+
+    .container {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        justify-content: center;
+    }
 }
 
+@media only screen and (max-width: 2210px) {
+    .container {
+        max-width: 2*600+3*30px !important;
+    }
+}
 
 @media only screen and (min-width: 1000px) {
     * {
@@ -105,23 +123,6 @@
         top: 50rem !important;
         left: 15rem;
         width: 50% !important;
-    }
-
-    /*Gallery*/
-
-    .gallery {
-        padding: 5rem !important;
-    }
-
-    .grid-gallery a {
-        margin-bottom: 2rem !important;
-
-    }
-
-
-    .column {
-        flex: 100% !important;
-        max-width: 100% !important;
     }
 
 }

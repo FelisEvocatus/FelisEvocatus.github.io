@@ -5,59 +5,80 @@
 @use "./partials/decorations.scss";
 @use "./partials/mobile.scss";
 
-$transition-img: all 0.5s;
+$image-width: 600px;
 
-.gallery {
-    display: flex;
-    margin: auto;
-    padding: 4rem;
-    align-items: center;
-    box-sizing: border-box;
-    max-width: 1800px;
+.container-wrapper {
+    margin-left: 6rem;
+    margin-right: 6rem;
 
-    .grid-gallery {
-        position: relative;
+    .container {
         display: flex;
-        flex-wrap: wrap;
-        padding: 2rem 2rem 1rem 2rem;
-        margin: auto;
+        margin: 6rem auto 6rem auto;
+        padding: 15px 0 0 0;
         background: rgba(255, 255, 255, 0.8);
-        border-width: 3px 1px;
+        border-width: 4px 1px;
         border-color: $main_colour;
         border-style: solid;
         border-radius: 10px;
+        max-width: 3*$image-width+3*30px;
 
-        a:hover {
+        .gallery-link:hover {
             border-top-left-radius: 0rem;
             border-bottom-right-radius: 0rem;
+            transition: border-radius 0.5s;
 
-            img {
+
+            .gallery-image {
                 transform: scale(1.005);
-                transition: $transition-img;
+                transition: transform 0.5s;
             }
         }
 
-        a {
+        .gallery-link {
             display: flex;
             overflow: hidden;
             border-top-left-radius: 4rem;
             border-bottom-right-radius: 4rem;
-            transition: $transition-img;
-            margin-bottom: 1rem;
+            max-width: $image-width;
+            transition: border-radius 0.5s, transform 0.25s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-            img {
+
+            .gallery-image {
                 width: 100%;
-                transition: $transition-img;
+                display: flex;
                 isolation: isolate;
                 margin: auto;
-                vertical-align: middle;
+                transition: transform 0.5s;
             }
         }
     }
 }
 
-.column {
-    flex: 45%;
-    max-width: 50%;
-    margin: 0 0.5rem;
+.refresher-line-wrapper {
+    display: flex;
+    overflow: hidden;
+    max-width: $image-width;
+    filter: drop-shadow(0px 0px 5px rgb(255, 0, 0, 0.2));
+
+    .refresher-line {
+        width: 100%;
+        display: flex;
+        isolation: isolate;
+        margin: auto;
+    }
 }
+
+/*
+.item {
+    width: $image-width;
+    height: 500px;
+    background-color: antiquewhite;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    transition: all 0.5s;
+}
+    */
