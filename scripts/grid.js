@@ -6,7 +6,7 @@ let magicGrid = new MagicGrid({
     static: false,
     center: true,
     gutter: 30,
-    items: 5,
+    items: 4,
 });
 
 magicGrid.listen();
