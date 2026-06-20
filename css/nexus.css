@@ -344,7 +344,7 @@ dec {
   /*Gallery*/
   .gallery-link,
   .refresher-line-wrapper {
-    max-width: 2048px !important;
+    max-width: 1024px !important;
   }
   .container {
     background: none !important;
