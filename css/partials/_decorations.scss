@@ -28,12 +28,12 @@ dec {
 
 .dec_n {
     top: 0;
-    height: 7.5rem;
+    height: 91px;
 }
 
 .dec_f {
     bottom: 0;
-    height: 3.3rem;
+    height: 55px;
 }
 
 $dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
@@ -50,23 +50,23 @@ $dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
 .dec_n_long::before {
     background-image: linear-gradient(to bottom, $dec_gradient);
     height: 30rem;
-    top: 7.5rem;
+    top: 91px;
 }
 
 .dec_n_short::before {
     background-image: linear-gradient(to bottom, $dec_gradient);
     height: 20rem;
-    top: 7.5rem;
+    top: 91px;
 }
 
 .dec_f_long::before {
     background-image: linear-gradient(to top, $dec_gradient);
     height: 30rem;
-    bottom: 3.3rem;
+    bottom: 55px;
 }
 
 .dec_f_short::before {
     background-image: linear-gradient(to top, $dec_gradient);
     height: 20rem;
-    bottom: 3.3rem;
+    bottom: 55px;
 }

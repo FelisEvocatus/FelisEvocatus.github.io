@@ -47,12 +47,8 @@ body {
         top: -110%;
         width: 300%;
         z-index: -50;
-    }
-
-    &.no-scroll {
         overflow-y: hidden;
     }
-
 }
 
 @keyframes grain {

@@ -1,39 +1,13 @@
 ﻿@use "./variables.scss" as *;
 
-@media only screen and (max-width: 1580px) {
+@media only screen and (max-width: 1600px) {
 
     nav {
         grid-template-areas:
             "a b" !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important
     }
-
-    /*Gallery*/
-    .gallery-link,
-    .refresher-line-wrapper {
-        max-width: 1024px !important;
-    }
-
-    .container {
-        background: none !important;
-        border: none !important;
-        padding: 0 !important;
-        justify-content: center;
-    }
 }
-
-@media only screen and (max-width: 2210px) {
-    .container {
-        max-width: 2*600+3*30px !important;
-    }
-}
-
-@media only screen and (min-width: 1000px) {
-    * {
-        cursor: none !important;
-    }
-}
-
 
 @media only screen and (max-width: 1000px) {
 
@@ -80,19 +54,6 @@
         }
     }
 
-    .navigation-wrapper {
-        .navigation-buttons-wrapper {
-            a {
-                background-color: transparent !important;
-            }
-
-            a:hover {
-                background-color: $secondary_colour !important;
-
-            }
-        }
-    }
-
     .text-area,
     .emoticon {
         font-size: 24px !important;
@@ -124,7 +85,6 @@
         left: 15rem;
         width: 50% !important;
     }
-
 }
 
 @media only screen and (max-width: 830px) {
@@ -141,5 +101,42 @@
     .sm-grid {
         grid-template-areas:
             "a" "b" "c" "d" !important;
+    }
+}
+
+
+/*----------Gallery----------*/
+
+@media only screen and (max-width: 2210px) {
+    .container {
+        max-width: 2*600+3*30px !important;
+    }
+}
+
+@media only screen and (max-width: 1387px) {
+
+
+    .gallery-link,
+    .refresher-line-wrapper {
+        max-width: 1400px !important;
+    }
+
+    .gallery-link {
+        transition: border-radius 0.5s, transform 0s !important;
+    }
+
+    .container {
+        background: none !important;
+        border: none !important;
+    }
+
+}
+
+
+/*----------Misc----------*/
+
+@media only screen and (min-width: 1000px) {
+    * {
+        cursor: none !important;
     }
 }

@@ -6,7 +6,7 @@ let magicGrid = new MagicGrid({
     static: false,
     center: true,
     gutter: 30,
-    items: 4,
+    items: 4, // Don't forget to change with every new image!
 });
 
 magicGrid.listen();
@@ -25,8 +25,8 @@ images.forEach(img => {
         img.addEventListener('load', () => {
             imagesLoaded++;
             if (imagesLoaded === images.length) {
-                magicGrid.positionItems(); // Repack when all images ready
-                console.log("Full Reposition"); // Example function
+                magicGrid.positionItems();
+                console.log("Full Reposition");
                 clearInterval(refresher);
                 console.log("Interval Has Been Cleared")
             }
@@ -35,6 +35,6 @@ images.forEach(img => {
 });
 
 const id = magicGrid.onPositionComplete(() => {
-    console.log("Grid Has Been Resized"); // Example function
+    console.log("Grid Has Been Resized");
 });
 
