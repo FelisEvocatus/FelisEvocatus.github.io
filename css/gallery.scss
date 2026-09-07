@@ -27,6 +27,14 @@ $image-width: 600px;
         border-radius: 10px;
         max-width: 3*$image-width+3*30px+35px;
 
+        animation-name: container-keyframes;
+        animation-duration: 2s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: backwards;
+        animation-delay: 1s;
+
+        transition: height 1s;
+
         .gallery-link {
             display: flex;
             overflow: hidden;
@@ -42,17 +50,14 @@ $image-width: 600px;
             border-top-right-radius: 3rem;
             border-bottom-left-radius: 3rem;
 
-            animation-name: opacity-keyframes, brightness-keyframes, border-keyframes;
-            animation-duration: 0.8s, 1.1s, 1.1s;
-            animation-timing-function: ease-out, ease-out, ease-in-out;
-            animation-fill-mode: backwards, backwards, backwards;
-            animation-delay: 0.45s, 0.8s, 0.8s;
+            animation-name: opacity-keyframes, border-keyframes;
+            animation-duration: 1s, 1.2s;
+            animation-timing-function: ease-out, ease-in-out;
+            animation-fill-mode: backwards, backwards;
+            animation-delay: 0.45s, 0.8s;
 
             .gallery-image {
                 width: 100%;
-                display: flex;
-                isolation: isolate;
-                margin: auto;
                 transition: transform 0.5s;
             }
 
@@ -99,16 +104,6 @@ $image-width: 600px;
     }
 }
 
-@keyframes brightness-keyframes {
-    0% {
-        filter: brightness(0%);
-    }
-
-    100% {
-        filter: brightness(100%);
-    }
-}
-
 @keyframes border-keyframes {
     0% {
         border-top-right-radius: 0rem;
@@ -118,6 +113,18 @@ $image-width: 600px;
     100% {
         border-top-right-radius: 3rem;
         border-bottom-left-radius: 3rem;
+    }
+}
+
+@keyframes container-keyframes {
+    0% {
+        background: rgba(255, 255, 255, 0);
+        border-color: rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        background: rgba(255, 255, 255, 0.8);
+        border-color: $main_colour;
     }
 }
 

@@ -20,6 +20,7 @@ body.onclick = function (e) {
   cursor.style["animation-duration"] = "0.25s";
   setTimeout(retime, 250);
 };
+
 function retime() {
   cursor.style["animation-name"] = "";
   cursor.style["animation-duration"] = "";
