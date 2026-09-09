@@ -23,24 +23,18 @@ nav {
         margin-bottom: auto;
         margin-right: 10px;
         margin-left: -20px;
+        transition: transform 0.5s;
 
-        :hover {
-            transform: scale(1.05);
-            transition: all 0.5s ease-in-out;
+        &:hover {
+            transform: scale(0.95);
+            transition: transform 0.5s;
         }
     }
 
     .logo {
-        max-width: 70px;
-        width: 100%;
+        max-height: 65px;
+        height: 100%;
         transition: all 0.5s;
-    }
-
-    .pp {
-        font-family: 'Railway';
-        margin: 0;
-        text-align: center;
-        font-size: 14px;
     }
 
     .title {
@@ -81,25 +75,44 @@ nav {
             transition: 200ms cubic-bezier(.65, .05, .36, 1);
             color: $secondary_colour;
             min-width: 200px;
-            border-left: 1px solid transparent;
-            border-image: linear-gradient(to bottom, black, transparent, black);
+            border-left: 2px solid transparent;
+            border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
             border-image-slice: 1;
 
-        }
+            &:hover {
+                background-color: black;
+                transition: background-color 0s;
 
-        a:hover {
-            background-color: black;
-            transition: background-color 0s;
-
-
-            p {
-                color: crimson;
-                filter: drop-shadow(0px 0px 5px rgba(220, 20, 60, 0.6));
-                text-decoration: underline !important;
+                p {
+                    color: crimson;
+                    filter: drop-shadow(0px 0px 5px rgba(220, 20, 60, 0.6));
+                    text-decoration: underline !important;
+                }
             }
         }
 
         .button-active {
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+                height: 35%;
+                aspect-ratio: 1/1;
+            }
+
+            &::before {
+                left: 0;
+                clip-path: polygon(0% 0%, 100% 100%, 0% 100%)
+            }
+
+            &::after {
+                right: -1px;
+                clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
+            }
+
             p {
                 filter: drop-shadow(0px 0px 5px orange) drop-shadow(0px 0px 6px rgba(255, 179, 0, 0.5)) drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.4))
             }
@@ -114,6 +127,7 @@ nav {
 }
 
 footer {
+    display: flex;
     padding: 10px $distance+$width;
     height: 28px;
     position: relative;
@@ -121,12 +135,13 @@ footer {
     z-index: 100;
     background-color: $main_colour;
     align-self: center;
+    align-items: center;
 }
 
-.copyright {
+.footer-text {
     color: white;
     font-family: 'SourceHanSerif';
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     margin: auto;
     text-align: center;
@@ -134,29 +149,16 @@ footer {
 
 /*Additional borders*/
 
+nav,
+footer {
+    border-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    border-image-slice: 1;
+}
+
 nav {
     border-bottom: 3px solid transparent;
-    border-image: linear-gradient(to right, transparent, black, transparent);
-    border-image-slice: 1;
 }
 
 footer {
     border-top: 3px solid transparent;
-    border-image: linear-gradient(to right, transparent, black, transparent);
-    border-image-slice: 1;
 }
-
-/*
-footer::before {
-    content: "";
-    position: absolute;
-    background-color: rgba(rgba(255, 254, 161), 0.5);
-    width: 70vw;
-    height: 20px;
-    margin-inline: auto;
-    clip-path: polygon(60vw 0, 70vw 60px, 0px 60px, 10vw 0);
-    left: 0;
-    right: 0;
-    bottom: 51px;
-}
-    */

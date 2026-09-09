@@ -24,16 +24,17 @@ $image-width: 600px;
         border-width: 4px 1px;
         border-color: $main_colour;
         border-style: solid;
-        border-radius: 10px;
         max-width: 3*$image-width+3*30px+35px;
 
-        animation-name: container-keyframes;
-        animation-duration: 2s;
-        animation-timing-function: ease-in-out;
-        animation-fill-mode: backwards;
-        animation-delay: 1s;
+        border-width: 5px 2px;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
 
-        transition: height 1s;
+        animation-name: container-keyframes, container-border-keyframes;
+        animation-duration: 1.75s, 1.2s;
+        animation-timing-function: ease-in-out, ease-in-out;
+        animation-fill-mode: backwards, backwards;
+        animation-delay: 0.8s, 1.4s;
 
         .gallery-link {
             display: flex;
@@ -55,6 +56,7 @@ $image-width: 600px;
             animation-timing-function: ease-out, ease-in-out;
             animation-fill-mode: backwards, backwards;
             animation-delay: 0.45s, 0.8s;
+            animation-iteration-count: 1, 1;
 
             .gallery-image {
                 width: 100%;
@@ -65,7 +67,7 @@ $image-width: 600px;
                 border-radius: 0rem !important;
                 transition: border-radius 0.5s;
 
-                animation-delay: 0.45s, 0.8s, 0s !important;
+                animation-delay: 0.45s, -5s !important;
 
                 .gallery-image {
                     transform: scale(0.98);
@@ -128,16 +130,14 @@ $image-width: 600px;
     }
 }
 
-/*
-.item {
-    width: $image-width;
-    height: 500px;
-    background-color: antiquewhite;
+@keyframes container-border-keyframes {
+    0% {
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 8px;
-    transition: all 0.5s;
+    100% {
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+    }
 }
-    */
