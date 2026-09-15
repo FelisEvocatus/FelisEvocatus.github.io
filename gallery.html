@@ -2,16 +2,16 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="utf-8">
+
+    <meta charset="UTF-8">
 
     <meta name="viewport"
         content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.5, user-scalable=yes">
 
     <meta name="description" content="Nexus | Gallery">
-    <link rel="icon" href="images/FelisEvocatus_Icon.png" type="image/png" sizes="512x512">
     <meta name="author" content="Felis Evocatus">
     <meta name="theme-color" content="#DC143C">
-    <meta name="keywords" content="Personal Page, FelisEvocatus, Felis Evocatus, Evocatus">
+    <meta name="keywords" content="Personal Page, FelisEvocatus, Felis Evocatus, Evocatus, Gallery">
 
     <meta property="twitter:title" content="Felis Evocatus Personal Page">
     <meta property="twitter:description" content="Nexus | Gallery">
@@ -24,29 +24,35 @@
     <meta property="og:url" content="https://felisevocatus.github.io/">
     <meta property="og:type" content="website">
 
-    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
     <title>
-
         Nexus | Gallery
     </title>
 
-    <link href="./css/gallery.css" type="text/css" rel="stylesheet">
-    <link href="./css/cursor.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="./images/FelisEvocatus_Icon.png" type="image/png" sizes="512x512">
+
+    <link rel="preconnect" href="./images/FelisEvocatus_Sign.png" fetchpriority="high" />
+    <link rel="preconnect" href="./images/Cogwheel.webp" fetchpriority="high" />
+    <link rel="preconnect" href="./images/Cogwheel_smol.webp" fetchpriority="high" />
+
+    <link rel="stylesheet" href="./css/cursor.css" type="text/css">
+    <link rel="stylesheet" href="./css/gallery.css" type="text/css">
+
+    <script src="https://unpkg.com/magic-grid/dist/magic-grid.min.js"></script>
+
 </head>
 
 <body id="body">
 
-    <div id="cursor" class="cursor">
-        <script src="./scripts/cursor.js"></script>
+    <div id="cursor">
     </div>
 
     <nav id="nav">
 
         <div class="navigation-wrapper nav-left">
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="logo-button" target="_blank" title=":3">
-                <img class="logo" src="images/FelisEvocatus_Sign.png" data-mouse="active" alt="logo">
-            </a>
-            <div>
+            <div class="logo-wrapper">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="logo-button" target="_blank" title=":3">
+                    <img class="logo" src="./images/FelisEvocatus_Sign.png" alt="logo" data-mouse="active">
+                </a>
                 <p class="title">Felis Evocatus</p>
             </div>
         </div>
@@ -64,57 +70,54 @@
 
     </nav>
 
-    <div class="container-wrapper">
+    <main class="container-wrapper">
         <div class="container">
 
-            <!-- Line -->
             <a class="refresher-line-wrapper" id="rline"
                 title="All structural integrity of the gallery based on this element, bruh">
-                <img class="refresher-line" src="images/line.png">
+                <img class="refresher-line" src="./images/line.png" alt="Gallery foundation">
             </a>
 
-            <!-- Fluffy Binah 20/06/26 -->
-            <a class="gallery-link" href="https://i.imgur.com/LztK80k.png" target="_blank" data-mouse="gallery">
-                <img class="gallery-image" src="images/gallery/Binah_20_06_26.webp" data-mouse="gallery"
-                    fetchpriority="high">
+            <a class="gallery-link" href="https://i.imgur.com/LztK80k.png" target="_blank"
+                alt="Binah with a fluffy collar" data-mouse="gallery">
+                <img class="gallery-image" src="./images/gallery/Binah_20_06_26.webp" data-mouse="gallery">
             </a>
 
-            <!-- 09/06/26 -->
-            <a class="gallery-link" href="https://i.imgur.com/tPaAlO5.png" target="_blank" data-mouse="gallery"
-                fetchpriority="high">
-                <img class="gallery-image" src="images/gallery/Sketch_09_06_26.webp" data-mouse="gallery">
+            <a class="gallery-link" href="https://i.imgur.com/tPaAlO5.png" target="_blank" alt="My old anatomy Sketch"
+                data-mouse="gallery">
+                <img class="gallery-image" src="./images/gallery/Sketch_09_06_26.webp" data-mouse="gallery">
             </a>
 
-            <!-- Galia -->
-            <a class="gallery-link" href="https://i.imgur.com/k6PZBUE.png" target="_blank" data-mouse="gallery"
-                fetchpriority="high">
-                <img class="gallery-image" src="images/gallery/Toothy.webp" data-mouse="gallery">
+            <a class="gallery-link" href="https://i.imgur.com/k6PZBUE.png" target="_blank" alt="Toothy Galia"
+                data-mouse="gallery">
+                <img class="gallery-image" src="./images/gallery/Toothy.webp" data-mouse="gallery">
             </a>
 
         </div>
 
-        <script src="./scripts/grid.js"></script>
-
-    </div>
+    </main>
 
     <footer>
-        <p class="footer-text">⛥ Last Update 15/09/2026 ⛥</p>
+        <p class="footer-text">⛥ Last Update 16/09/2026 ⛥</p>
     </footer>
 
     <div>
-        <dec class="dec_left_2 dec_n dec_n_long"></dec>
-        <dec class="dec_left_1 dec_n dec_n_short"></dec>
-        <dec class="dec_right_1 dec_n dec_n_short"></dec>
-        <dec class="dec_right_2 dec_n dec_n_long"></dec>
+        <div class="dec dec_left_2 dec_n dec_n_long"></div>
+        <div class="dec dec_left_1 dec_n dec_n_short"></div>
+        <div class="dec dec_right_1 dec_n dec_n_short"></div>
+        <div class="dec dec_right_2 dec_n dec_n_long"></div>
 
-        <dec class="dec_left_2 dec_f dec_f_long"></dec>
-        <dec class="dec_left_1 dec_f dec_f_short"></dec>
-        <dec class="dec_right_1 dec_f dec_f_short"></dec>
-        <dec class="dec_right_2 dec_f dec_f_long"></dec>
+        <div class="dec dec_left_2 dec_f dec_f_long"></div>
+        <div class="dec dec_left_1 dec_f dec_f_short"></div>
+        <div class="dec dec_right_1 dec_f dec_f_short"></div>
+        <div class="dec dec_right_2 dec_f dec_f_long"></div>
 
         <div class="gear_1"></div>
         <div class="gear_2"></div>
     </div>
+
+    <script src="./scripts/cursor.js"></script>
+    <script src="./scripts/grid.js"></script>
 
 </body>
 

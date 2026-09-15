@@ -1,3 +1,4 @@
+/*Foundation part*/
 html {
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
@@ -42,6 +43,7 @@ body {
   font-style: normal;
   font-weight: normal;
 }
+/*Gear animation part*/
 .gear_1,
 .gear_2 {
   position: fixed;
@@ -75,6 +77,7 @@ body {
     transform: rotate(390deg);
   }
 }
+/*Background grain*/
 body:before {
   animation: grain 8s steps(10) infinite;
   background-image: url(../images/grain.webp);
@@ -121,51 +124,49 @@ body:before {
     transform: translate(-10%, 10%);
   }
 }
+/*Nav part*/
 nav {
   position: relative;
   background-color: crimson;
   display: grid;
   align-items: center;
   padding: 0 3rem;
-  height: 84px;
+  height: 67px;
   grid-template-areas: "a a b b b";
   grid-template-columns: repeat(5, minmax(0, 1fr));
   z-index: 100;
 }
-
-.nav-left {
+nav .nav-left {
   grid-area: a;
-  justify-content: center;
 }
-.nav-left .logo-button {
+nav .nav-left .logo-wrapper {
   display: flex;
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 10px;
-  margin-left: -20px;
-  transition: transform 0.5s;
+  align-items: center;
+  padding: 0 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
-.nav-left .logo-button:hover {
+nav .nav-left .logo-wrapper .logo-button {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+nav .nav-left .logo-wrapper .logo-button:hover {
   transform: scale(0.95);
-  transition: transform 0.5s;
+  transition: transform 0.5s ease;
 }
-.nav-left .logo {
-  max-height: 65px;
+nav .nav-left .logo-wrapper .logo-button .logo {
+  max-height: 58px;
   height: 100%;
-  transition: all 0.5s;
 }
-.nav-left .title {
-  margin: auto;
-  text-align: center;
-  font-size: 36px;
-  word-break: normal;
+nav .nav-left .logo-wrapper .title {
+  margin: 0;
+  text-align: left;
+  font-size: 34px;
 }
-
-.nav-right {
+nav .nav-right {
   grid-area: b;
 }
-
-.navigation-wrapper {
+nav .navigation-wrapper {
   position: relative;
   display: flex;
   align-items: center;
@@ -174,15 +175,15 @@ nav {
   width: 100%;
   height: 100%;
 }
-.navigation-wrapper .navigation-buttons-wrapper {
+nav .navigation-wrapper .navigation-buttons-wrapper {
   position: relative;
   display: grid;
-  grid-template-areas: "a a";
   /*Number of buttons*/
+  grid-template-areas: "a a";
   width: 100%;
   height: 100%;
 }
-.navigation-wrapper .navigation-buttons-wrapper a {
+nav .navigation-wrapper .navigation-buttons-wrapper a {
   display: flex;
   justify-content: center;
   position: relative;
@@ -196,16 +197,20 @@ nav {
      border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
   border-image-slice: 1;
 }
-.navigation-wrapper .navigation-buttons-wrapper a:hover {
+nav .navigation-wrapper .navigation-buttons-wrapper a:hover {
   background-color: black;
   transition: background-color 0s;
 }
-.navigation-wrapper .navigation-buttons-wrapper a:hover p {
+nav .navigation-wrapper .navigation-buttons-wrapper a:hover p {
   color: crimson;
   filter: drop-shadow(0px 0px 5px rgba(220, 20, 60, 0.6));
   text-decoration: underline !important;
 }
-.navigation-wrapper .navigation-buttons-wrapper .button-active::before, .navigation-wrapper .navigation-buttons-wrapper .button-active::after {
+nav .navigation-wrapper .navigation-buttons-wrapper .nav-button {
+  font-size: 46px;
+  margin: auto;
+}
+nav .navigation-wrapper .navigation-buttons-wrapper .button-active::before, nav .navigation-wrapper .navigation-buttons-wrapper .button-active::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -213,27 +218,23 @@ nav {
   height: 30px;
   aspect-ratio: 1/1;
 }
-.navigation-wrapper .navigation-buttons-wrapper .button-active::before {
+nav .navigation-wrapper .navigation-buttons-wrapper .button-active::before {
   left: 0;
   clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
 }
-.navigation-wrapper .navigation-buttons-wrapper .button-active::after {
+nav .navigation-wrapper .navigation-buttons-wrapper .button-active::after {
   right: 2px;
   clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
 }
-.navigation-wrapper .navigation-buttons-wrapper .button-active p {
+nav .navigation-wrapper .navigation-buttons-wrapper .button-active p {
   filter: drop-shadow(0px 0px 5px orange) drop-shadow(0px 0px 6px rgba(255, 179, 0, 0.5)) drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.4));
 }
 
-.nav-button {
-  font-size: 48px;
-  margin: auto;
-}
-
+/*Footer part*/
 footer {
   display: flex;
-  padding: 10px 3rem;
-  height: 28px;
+  padding: 10px 0;
+  height: 22px;
   position: relative;
   width: 100%;
   z-index: 100;
@@ -241,11 +242,10 @@ footer {
   align-self: center;
   align-items: center;
 }
-
-.footer-text {
+footer .footer-text {
   color: white;
   font-family: "SourceHanSerif";
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   margin: auto;
   text-align: center;
@@ -254,8 +254,8 @@ footer {
 /*Additional borders*/
 nav,
 footer {
-  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
-     border-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+     border-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
   border-image-slice: 1;
 }
 
@@ -267,7 +267,8 @@ footer {
   border-top: 3px solid transparent;
 }
 
-dec {
+/*Decorations part*/
+.dec {
   position: absolute;
   width: 0.9rem;
   background-color: black;
@@ -294,12 +295,12 @@ dec {
 
 .dec_n {
   top: 0;
-  height: 91px;
+  height: 76px;
 }
 
 .dec_f {
   bottom: 0;
-  height: 55px;
+  height: 51px;
 }
 
 .dec_n_long::before,
@@ -314,34 +315,56 @@ dec {
 .dec_n_long::before {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   height: 30rem;
-  top: 91px;
+  top: 76px;
 }
 
 .dec_n_short::before {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   height: 20rem;
-  top: 91px;
+  top: 76px;
 }
 
 .dec_f_long::before {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   height: 30rem;
-  bottom: 55px;
+  bottom: 51px;
 }
 
 .dec_f_short::before {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0));
   height: 20rem;
-  bottom: 55px;
+  bottom: 51px;
 }
 
-@media only screen and (max-width: 1600px) {
+/*Responsible design part*/
+@media only screen and (max-width: 1000px) {
+  body:before,
+  .cursor,
+  .title,
+  .nav-left {
+    display: none !important;
+  }
   nav {
-    grid-template-areas: "a b" !important;
+    grid-template-areas: "b b" !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
-}
-@media only screen and (max-width: 1000px) {
+  .text-area {
+    font-size: 24px !important;
+  }
+  .grid {
+    grid-template-areas: "a" "b" "c" !important;
+  }
+  .br-2 {
+    border-width: 2px 2px 2px 2px !important;
+    border-bottom-left-radius: 0px !important;
+  }
+  .br-3 {
+    border-bottom-left-radius: 20px;
+  }
+  .sm-grid {
+    grid-template-areas: "a b" "c d" !important;
+  }
+  /*----------Gears----------*/
   .gear_1,
   .gear_2 {
     background-image: url(../images/Cogwheel_smol.webp) !important;
@@ -360,48 +383,6 @@ dec {
     width: 100vw !important;
     height: 100vw !important;
     background-size: 100vw !important;
-  }
-  body:before,
-  .cursor,
-  .title,
-  .nav-left {
-    display: none !important;
-  }
-  nav {
-    grid-template-areas: "b b" !important;
-  }
-  .navigation-wrapper,
-  .navigation-buttons-wrapper {
-    width: 100% !important;
-  }
-  .navigation-wrapper a,
-  .navigation-buttons-wrapper a {
-    width: 100% !important;
-  }
-  .text-area,
-  .emoticon {
-    font-size: 22px !important;
-  }
-  .grid {
-    grid-template-areas: "a" "b" "c" !important;
-  }
-  .sm-grid {
-    grid-template-areas: "a b" "c d" !important;
-    padding: 1.5rem !important;
-    gap: 1.5rem !important;
-  }
-  .sm-grid div a {
-    margin: 0 !important;
-  }
-  .img-gear {
-    top: 50rem !important;
-    left: 15rem;
-    width: 50% !important;
-  }
-}
-@media only screen and (max-width: 830px) {
-  .sm-grid {
-    grid-template-areas: "a a" "b b" "c d" !important;
   }
 }
 @media only screen and (max-width: 600px) {
@@ -429,11 +410,12 @@ dec {
   }
 }
 /*----------Misc----------*/
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
   * {
     cursor: none !important;
   }
 }
+/*Gallery part*/
 .container-wrapper {
   padding: 4rem;
   margin-top: auto;
@@ -488,6 +470,7 @@ dec {
   transition: transform 0.5s;
 }
 
+/*Line image to stabilise the gallery*/
 .refresher-line-wrapper {
   display: flex;
   overflow: hidden;
@@ -504,6 +487,7 @@ dec {
   margin: auto;
 }
 
+/*Gallery animations*/
 @keyframes opacity-keyframes {
   0% {
     opacity: 0%;

@@ -2,13 +2,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-    <meta charset="utf-8">
+
+    <meta charset="UTF-8">
 
     <meta name="viewport"
         content="width=device-width, initial-scale=0.5, minimum-scale=0.5, maximum-scale=1.5, user-scalable=yes">
 
     <meta name="description" content="Nexus | Main Page">
-    <link rel="icon" href="images/FelisEvocatus_Icon.png" type="image/png" sizes="512x512">
     <meta name="author" content="Felis Evocatus">
     <meta name="theme-color" content="#DC143C">
     <meta name="keywords" content="Personal Page, FelisEvocatus, Felis Evocatus, Evocatus">
@@ -28,23 +28,29 @@
         Nexus | Main Page
     </title>
 
-    <link href="./css/nexus.css" type="text/css" rel="stylesheet">
-    <link href="./css/cursor.css" type="text/css" rel="stylesheet">
+    <link rel="icon" href="./images/FelisEvocatus_Icon.png" type="image/png" sizes="512x512">
+
+    <link rel="preconnect" href="./images/FelisEvocatus_Sign.png" fetchpriority="high" />
+    <link rel="preconnect" href="./images/Cogwheel.webp" fetchpriority="high" />
+    <link rel="preconnect" href="./images/Cogwheel_smol.webp" fetchpriority="high" />
+
+    <link rel="stylesheet" href="./css/cursor.css" type="text/css">
+    <link rel="stylesheet" href="./css/nexus.css" type="text/css">
+
 </head>
 
 <body id="body">
 
-    <div id="cursor" class="cursor">
-        <script src="./scripts/cursor.js"></script>
+    <div id="cursor">
     </div>
 
     <nav id="nav">
 
         <div class="navigation-wrapper nav-left">
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="logo-button" target="_blank" title=":3">
-                <img class="logo" src="images/FelisEvocatus_Sign.png" data-mouse="active" alt="logo">
-            </a>
-            <div>
+            <div class="logo-wrapper">
+                <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="logo-button" target="_blank" title=":3">
+                    <img class="logo" src="./images/FelisEvocatus_Sign.png" alt="logo" data-mouse="active">
+                </a>
                 <p class="title">Felis Evocatus</p>
             </div>
         </div>
@@ -62,17 +68,17 @@
 
     </nav>
 
-    <div class="grid">
+    <main class="grid">
 
-        <element class="header-area br-1">
+        <section class="header-area br-1">
             <hr>
             <hr>
             Welcome to the Nexus
             <hr>
             <hr>
-        </element>
+        </section>
 
-        <element class="text-area br-2">
+        <section class="text-area br-2">
             <p class="center">
                 <b>Hi!</b>
             </p>
@@ -103,54 +109,57 @@
 
             <p class="center">
                 <b>No commissions <br> I'm not ready for this yet</b>
+                <br>
+                <b>⛥⛥⛥</b> (｡-ω-) <b>⛥⛥⛥</b>
             </p>
+        </section>
 
-            <p class="center emoticon"><b>⛥⛥⛥</b> (｡-ω-) <b>⛥⛥⛥</b></p>
-        </element>
-
-        <element class="links-area br-3">
+        <section class="links-area br-3">
             <div class=sm-grid>
                 <a class="smg-a" href="https://www.deviantart.com/thelastevocatus" target="_blank" title="DeviantArt"
                     data-mouse="active">
-                    <img class="links" src="./images/deviantart.png" alt="DeviantArt" data-mouse="active">
+                    <img class="links" src="./images/deviantart.png" alt="DeviantArt account link" data-mouse="active">
                 </a>
 
                 <a class="smg-b" href="https://www.pixiv.net/en/users/113093937" target="_blank" title="Pixiv"
                     data-mouse="active">
-                    <img class="links" src="./images/pixiv_new.png" alt="Pixiv" data-mouse="active">
+                    <img class="links" src="./images/pixiv_new.png" alt="Pixiv account link" data-mouse="active">
                 </a>
 
                 <a class="smg-c" href="https://discord.com/users/1270311158532018218" target="_blank"
                     title="My Discord account" data-mouse="active">
-                    <img class="links" src="./images/discord.png" alt="Discord" data-mouse="active">
+                    <img class="links" src="./images/discord.png" alt="Discord account link" data-mouse="active">
                 </a>
 
                 <a class="smg-d" href="https://bsky.app/profile/felisevocatus.bsky.social" target="_blank"
                     title="Bluesky" data-mouse="active">
-                    <img class="links" src="./images/bluesky.png" alt="Bluesky" data-mouse="active">
+                    <img class="links" src="./images/bluesky.png" alt="Bluesky account link" data-mouse="active">
                 </a>
             </div>
-        </element>
-    </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p class="footer-text">⛥ Last Update 15/09/2026 ⛥</p>
+        <p class="footer-text">⛥ Last Update 16/09/2026 ⛥</p>
     </footer>
 
     <div>
-        <dec class="dec_left_1 dec_n dec_n_short"></dec>
-        <dec class="dec_left_2 dec_n dec_n_long"></dec>
-        <dec class="dec_right_1 dec_n dec_n_short"></dec>
-        <dec class="dec_right_2 dec_n dec_n_long"></dec>
+        <div class="dec dec_left_2 dec_n dec_n_long"></div>
+        <div class="dec dec_left_1 dec_n dec_n_short"></div>
+        <div class="dec dec_right_1 dec_n dec_n_short"></div>
+        <div class="dec dec_right_2 dec_n dec_n_long"></div>
 
-        <dec class="dec_left_1 dec_f dec_f_short"></dec>
-        <dec class="dec_left_2 dec_f dec_f_long"></dec>
-        <dec class="dec_right_1 dec_f dec_f_short"></dec>
-        <dec class="dec_right_2 dec_f dec_f_long"></dec>
+        <div class="dec dec_left_2 dec_f dec_f_long"></div>
+        <div class="dec dec_left_1 dec_f dec_f_short"></div>
+        <div class="dec dec_right_1 dec_f dec_f_short"></div>
+        <div class="dec dec_right_2 dec_f dec_f_long"></div>
 
         <div class="gear_1"></div>
         <div class="gear_2"></div>
     </div>
+
+    <script src="./scripts/cursor.js"></script>
 
 </body>
 

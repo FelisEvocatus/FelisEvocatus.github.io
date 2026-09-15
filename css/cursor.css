@@ -1,3 +1,4 @@
+/*Cursor part*/
 .cursor {
   position: fixed;
   width: 12px;
@@ -7,8 +8,8 @@
   border-radius: 50%;
   border: 1px solid black;
   pointer-events: none;
-  transition: top 0s, left 0s, height 0.5s, width 0.5s;
-  z-index: 10000;
+  transition: height 0.5s ease, width 0.5s ease;
+  z-index: 100000;
 }
 
 .hover,

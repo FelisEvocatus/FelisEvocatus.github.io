@@ -1,4 +1,6 @@
-﻿.gear_1,
+﻿/*Gear animation part*/
+
+.gear_1,
 .gear_2 {
     position: fixed;
     z-index: -100;
@@ -33,7 +35,7 @@
     }
 }
 
-
+/*Background grain*/
 
 body {
     &:before {

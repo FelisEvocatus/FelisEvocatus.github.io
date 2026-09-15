@@ -10,6 +10,8 @@ $opacity-animation-delay: 0.45s;
 
 $image-width: 600px;
 
+/*Gallery part*/
+
 .container-wrapper {
     padding: 4rem;
     margin-top: auto;
@@ -78,6 +80,8 @@ $image-width: 600px;
     }
 }
 
+/*Line image to stabilise the gallery*/
+
 .refresher-line-wrapper {
     display: flex;
     overflow: hidden;
@@ -95,6 +99,8 @@ $image-width: 600px;
         margin: auto;
     }
 }
+
+/*Gallery animations*/
 
 @keyframes opacity-keyframes {
     0% {

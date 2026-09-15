@@ -1,6 +1,8 @@
 @use "./variables.scss" as *;
 
-dec {
+/*Decorations part*/
+
+.dec {
     position: absolute;
     width: $width;
     background-color: black;
@@ -26,14 +28,17 @@ dec {
     width: $width + 0.5rem;
 }
 
+$dec_nav_height: 76px;
+$dec_footer_height: 51px;
+
 .dec_n {
     top: 0;
-    height: 91px;
+    height: $dec_nav_height;
 }
 
 .dec_f {
     bottom: 0;
-    height: 55px;
+    height: $dec_footer_height;
 }
 
 $dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
@@ -50,23 +55,23 @@ $dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
 .dec_n_long::before {
     background-image: linear-gradient(to bottom, $dec_gradient);
     height: 30rem;
-    top: 91px;
+    top: $dec_nav_height;
 }
 
 .dec_n_short::before {
     background-image: linear-gradient(to bottom, $dec_gradient);
     height: 20rem;
-    top: 91px;
+    top: $dec_nav_height;
 }
 
 .dec_f_long::before {
     background-image: linear-gradient(to top, $dec_gradient);
     height: 30rem;
-    bottom: 55px;
+    bottom: $dec_footer_height;
 }
 
 .dec_f_short::before {
     background-image: linear-gradient(to top, $dec_gradient);
     height: 20rem;
-    bottom: 55px;
+    bottom: $dec_footer_height;
 }

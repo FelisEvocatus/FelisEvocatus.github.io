@@ -1,16 +1,48 @@
 ﻿@use "./variables.scss" as *;
 
-@media only screen and (max-width: 1600px) {
-
-    nav {
-        grid-template-areas:
-            "a b" !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important
-    }
-}
+/*Responsible design part*/
 
 @media only screen and (max-width: 1000px) {
 
+    body:before,
+    .cursor,
+    .title,
+    .nav-left {
+        display: none !important;
+    }
+
+    nav {
+        grid-template-areas:
+            "b b" !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important
+    }
+
+    .text-area {
+        font-size: 24px !important;
+    }
+
+    .grid {
+        grid-template-areas:
+            "a"
+            "b"
+            "c" !important;
+    }
+
+    .br-2 {
+        border-width: 2px 2px 2px 2px !important;
+        border-bottom-left-radius: 0px !important;
+    }
+
+    .br-3 {
+        border-bottom-left-radius: 20px;
+    }
+
+    .sm-grid {
+        grid-template-areas:
+            "a b" "c d" !important;
+    }
+
+    /*----------Gears----------*/
     .gear_1,
     .gear_2 {
         background-image: url(../images/Cogwheel_smol.webp) !important;
@@ -31,66 +63,6 @@
         width: 100vw !important;
         height: 100vw !important;
         background-size: 100vw !important;
-    }
-
-    body:before,
-    .cursor,
-    .title,
-    .nav-left {
-        display: none !important;
-    }
-
-    nav {
-        grid-template-areas:
-            "b b" !important;
-    }
-
-    .navigation-wrapper,
-    .navigation-buttons-wrapper {
-        width: 100% !important;
-
-        a {
-            width: 100% !important;
-        }
-    }
-
-    .text-area,
-    .emoticon {
-        font-size: 22px !important;
-    }
-
-    .grid {
-        grid-template-areas:
-            "a"
-            "b"
-            "c" !important;
-    }
-
-    .sm-grid {
-        grid-template-areas:
-            "a b" "c d" !important;
-        padding: 1.5rem !important;
-        gap: 1.5rem !important;
-
-        div {
-            a {
-                margin: 0 !important;
-            }
-        }
-    }
-
-    .img-gear {
-        top: 50rem !important;
-        left: 15rem;
-        width: 50% !important;
-    }
-}
-
-@media only screen and (max-width: 830px) {
-
-    .sm-grid {
-        grid-template-areas:
-            "a a" "b b" "c d" !important;
     }
 }
 
@@ -134,7 +106,7 @@
 
 /*----------Misc----------*/
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1001px) {
     * {
         cursor: none !important;
     }
