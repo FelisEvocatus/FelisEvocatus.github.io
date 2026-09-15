@@ -103,46 +103,46 @@ $image-width: 600px;
 /*Gallery animations*/
 
 @keyframes opacity-keyframes {
-    0% {
+    from {
         opacity: 0%;
     }
 
-    100% {
+    to {
         opacity: 100%;
     }
 }
 
 @keyframes border-keyframes {
-    0% {
+    from {
         border-top-right-radius: 0rem;
         border-bottom-left-radius: 0rem;
     }
 
-    100% {
+    to {
         border-top-right-radius: 3rem;
         border-bottom-left-radius: 3rem;
     }
 }
 
 @keyframes container-keyframes {
-    0% {
+    from {
         background: rgba(255, 255, 255, 0);
         border-color: rgba(255, 255, 255, 0);
     }
 
-    100% {
+    to {
         background: rgba(255, 255, 255, 0.8);
         border-color: $main_colour;
     }
 }
 
 @keyframes container-border-keyframes {
-    0% {
+    from {
         border-top-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
 
-    100% {
+    to {
         border-top-left-radius: 40px;
         border-bottom-right-radius: 40px;
     }

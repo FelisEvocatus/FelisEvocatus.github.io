@@ -50,6 +50,9 @@ body {
   z-index: -100;
   background-image: url(../images/Cogwheel.webp);
   opacity: 8%;
+  animation-timing-function: linear, linear;
+  animation-direction: normal, normal;
+  animation-play-state: running, running;
 }
 
 .gear_1 {
@@ -79,18 +82,18 @@ body {
 }
 
 @keyframes gear-rotation {
-  0% {
+  from {
     transform: rotate(30deg);
   }
-  100% {
+  to {
     transform: rotate(390deg);
   }
 }
 @keyframes gear-emergence {
-  0% {
+  from {
     opacity: 0%;
   }
-  100% {
+  to {
     opacity: 8%;
   }
 }
