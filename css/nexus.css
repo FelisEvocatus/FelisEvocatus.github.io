@@ -64,7 +64,7 @@ body {
   animation-name: gear-rotation, gear-emergence;
   animation-duration: 360s, 2s;
   animation-fill-mode: none, backwards;
-  animation-delay: 0s, 0.1s;
+  animation-delay: -10s, 0.1s;
   animation-iteration-count: infinite, 1;
 }
 
@@ -395,6 +395,7 @@ footer {
     width: 150vw !important;
     height: 150vw !important;
     background-size: 150vw !important;
+    animation-duration: 180s, 1s !important;
   }
   .gear_2 {
     bottom: -50vw !important;
@@ -402,6 +403,7 @@ footer {
     width: 100vw !important;
     height: 100vw !important;
     background-size: 100vw !important;
+    animation-duration: 150s, 1s !important;
   }
 }
 @media only screen and (max-width: 600px) {
