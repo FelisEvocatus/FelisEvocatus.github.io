@@ -16,7 +16,7 @@
 
 .dec_left_2 {
     left: $distance - $margin;
-    width: $width + 0.5rem;
+    width: $width + 8px;
 }
 
 .dec_right_1 {
@@ -25,7 +25,7 @@
 
 .dec_right_2 {
     right: $distance - $margin;
-    width: $width + 0.5rem;
+    width: $width + 8px;
 }
 
 $dec_nav_height: 86px;
@@ -54,24 +54,24 @@ $dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
 
 .dec_n_long::before {
     background-image: linear-gradient(to bottom, $dec_gradient);
-    height: 30rem;
+    height: 480px;
     top: $dec_nav_height;
 }
 
 .dec_n_short::before {
     background-image: linear-gradient(to bottom, $dec_gradient);
-    height: 20rem;
+    height: 320px;
     top: $dec_nav_height;
 }
 
 .dec_f_long::before {
     background-image: linear-gradient(to top, $dec_gradient);
-    height: 30rem;
+    height: 480px;
     bottom: $dec_footer_height;
 }
 
 .dec_f_short::before {
     background-image: linear-gradient(to top, $dec_gradient);
-    height: 20rem;
+    height: 320px;
     bottom: $dec_footer_height;
 }
