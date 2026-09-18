@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1000px) {
+  body:before,
+  .cursor,
+  .title,
+  .nav-left {
+    display: none !important;
+  }
+  nav {
+    grid-template-areas: "b b";
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  .text-area {
+    font-size: 24px !important;
+  }
+  .grid {
+    grid-template-areas: "a" "b" "c" !important;
+  }
+  /*
+  .br-2 {
+      border-width: 2px 2px 2px 2px !important;
+      border-bottom-left-radius: 0px !important;
+  }
+
+  .br-3 {
+      border-bottom-left-radius: 20px !important;
+  }
+  */
+  .links-area {
+    grid-template-areas: "a b" "c d" !important;
+  }
+  nav {
+    -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) !important;
+       border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) !important;
+    border-image-slice: 1 !important;
+  }
+  /*----------Gears----------*/
+  .gear_1,
+  .gear_2 {
+    background-image: url(../images/Cogwheel_smol.webp) !important;
+  }
+  .gear_1 {
+    top: -75vw !important;
+    left: -75vw !important;
+    width: 150vw !important;
+    height: 150vw !important;
+    background-size: 150vw !important;
+    animation-duration: 180s, 1s !important;
+  }
+  .gear_2 {
+    bottom: -50vw !important;
+    right: -50vw !important;
+    width: 100vw !important;
+    height: 100vw !important;
+    background-size: 100vw !important;
+    animation-duration: 150s, 1s !important;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .links-area {
+    grid-template-areas: "a" "b" "c" "d" !important;
+  }
+}
+/*----------Gallery----------*/
+@media only screen and (max-width: 2210px) {
+  .container {
+    max-width: 1290px !important;
+  }
+}
+@media only screen and (max-width: 1400px) {
+  .gallery-link,
+  .refresher-line-wrapper {
+    max-width: 1400px !important;
+  }
+  .gallery-link {
+    transition: border-radius 0.5s, transform 0s !important;
+  }
+  .container {
+    background: none !important;
+    border-width: 4px 0px 0px 0px !important;
+    border-top-right-radius: 0px !important;
+    clip-path: none !important;
+    animation-name: opacity-keyframes !important;
+    animation-duration: 1s !important;
+    animation-timing-function: ease-in-out !important;
+    animation-fill-mode: backwards !important;
+    animation-delay: 0.5s !important;
+  }
+  .container::before, .container::after {
+    left: 0px !important;
+  }
+  .container-wrapper {
+    padding: 4rem 6rem !important;
+  }
+}
+/*----------Misc----------*/
+@media only screen and (min-width: 1001px) {
+  * {
+    cursor: none !important;
+  }
+}

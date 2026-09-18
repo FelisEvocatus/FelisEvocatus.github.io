@@ -1,0 +1,44 @@
+$cursor: 12px;
+$cursor-hover: 80px;
+$cursor-transition: 0.5s ease;
+
+.cursor {
+    position: fixed;
+    width: $cursor;
+    height: $cursor;
+    transform: translate(-50%, -50%);
+    background: rgba(220, 20, 60, 0.6);
+    border-radius: 50%;
+    border: 1px solid black;
+    pointer-events: none;
+    transition: height $cursor-transition, width $cursor-transition;
+    z-index: 100000;
+}
+
+.hover,
+.hover-gallery {
+    width: $cursor-hover;
+    height: $cursor-hover;
+    background: rgb(220, 20, 60) !important;
+    mix-blend-mode: difference;
+    border: 0px !important;
+}
+
+.hover-gallery {
+    width: $cursor-hover*1.8;
+    height: $cursor-hover*1.8;
+}
+
+@keyframes click {
+    0% {
+        opacity: 100%;
+    }
+
+    50% {
+        opacity: 0%;
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}
