@@ -106,12 +106,7 @@
             font-size: 18px;
 
             margin-top: 0px;
-            margin-bottom: -30px;
-
-            .text-offset-bg {
-                background: white;
-                padding: 0 16px;
-            }
+            margin-bottom: -31px;
 
             &.text-offset-first {
                 margin-top: 18px;
@@ -133,6 +128,16 @@
                 text-indent: 0;
             }
 
+            $poly_hollow: 25px;
+
+            &.text-wrapper-1 {
+                clip-path: polygon(0 0, calc(50% - $poly_hollow) 0, calc(50% - $poly_hollow) 2%, calc(50% + $poly_hollow) 2%, calc(50% + $poly_hollow) 0, 100% 0, 100% 100%, 0 100%);
+            }
+
+            &.text-wrapper-2 {
+                $poly_hollow_2: $poly_hollow - 5px;
+                clip-path: polygon(0 0, calc(50% - $poly_hollow_2) 0, calc(50% - $poly_hollow_2) 2%, calc(50% + $poly_hollow_2) 2%, calc(50% + $poly_hollow_2) 0, 100% 0, 100% 100%, 0 100%);
+            }
         }
     }
 

@@ -350,11 +350,7 @@ footer {
   text-indent: 0;
   font-size: 18px;
   margin-top: 0px;
-  margin-bottom: -30px;
-}
-.grid .text-area .text-offset .text-offset-bg {
-  background: white;
-  padding: 0 16px;
+  margin-bottom: -31px;
 }
 .grid .text-area .text-offset.text-offset-first {
   margin-top: 18px;
@@ -371,6 +367,12 @@ footer {
 .grid .text-area .text-wrapper .center {
   text-align: center;
   text-indent: 0;
+}
+.grid .text-area .text-wrapper.text-wrapper-1 {
+  clip-path: polygon(0 0, calc(50% - 25px) 0, calc(50% - 25px) 2%, calc(50% + 25px) 2%, calc(50% + 25px) 0, 100% 0, 100% 100%, 0 100%);
+}
+.grid .text-area .text-wrapper.text-wrapper-2 {
+  clip-path: polygon(0 0, calc(50% - 20px) 0, calc(50% - 20px) 2%, calc(50% + 20px) 2%, calc(50% + 20px) 0, 100% 0, 100% 100%, 0 100%);
 }
 .grid .links-area {
   box-sizing: border-box;
