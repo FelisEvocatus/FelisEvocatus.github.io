@@ -9,7 +9,10 @@
     grid-template-areas: "b b";
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   }
-  .text-area {
+  .text-offset {
+    font-size: 24px !important;
+  }
+  .text-wrapper p {
     font-size: 24px !important;
   }
   .grid {
@@ -87,6 +90,12 @@
   }
   .container::before, .container::after {
     left: 0px !important;
+  }
+  .container::before {
+    height: 20px;
+  }
+  .container::after {
+    height: 30px;
   }
   .container-wrapper {
     padding: 4rem 6rem !important;

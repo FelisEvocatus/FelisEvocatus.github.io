@@ -51,13 +51,13 @@ $image-width: 600px;
         }
 
         &::before {
-            height: 41px;
+            height: 40px;
 
             clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
         }
 
         &::after {
-            height: 56px;
+            height: 54px;
 
             clip-path: polygon(87% 0%, 100% 0%, 0% 100%, 0% 87%);
         }

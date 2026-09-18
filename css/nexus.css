@@ -146,9 +146,8 @@ footer {
 }
 footer .footer-text {
   color: white;
-  font-family: "SourceHanSerif";
+  font-family: "Railway";
   font-size: 16px;
-  font-weight: bold;
   margin: auto;
 }
 footer::before, footer::after {
@@ -281,6 +280,7 @@ footer {
   width: 100%;
   border-color: crimson;
   border-style: solid;
+  border-width: 4px;
   clip-path: polygon(40px 0%, 100% 0%, 100% 100%, 0% 100%, 0% 40px);
   transition-property: background-color, filter;
   transition-delay: 0.25s, 0s;
@@ -325,28 +325,51 @@ footer {
 }
 .grid .header-area {
   grid-area: a;
-  font-family: "Norwester";
   padding: 24px 12px;
+  box-sizing: border-box;
+}
+.grid .header-area .nexus {
   font-size: 54px;
   color: black;
-  box-sizing: border-box;
+  font-family: "Norwester";
+  margin: 8px auto;
 }
 .grid .text-area {
   grid-area: b;
   font-family: "SourceHanSerif";
-  font-size: 18px;
   text-align: justify;
   color: black;
   padding: 20px;
   box-sizing: border-box;
-  align-content: center;
+  align-content: start;
 }
-.grid .text-area p {
-  padding: 0 2rem;
+.grid .text-area .text-offset {
+  font-family: "Railway";
+  position: relative;
+  text-align: center;
+  text-indent: 0;
+  font-size: 18px;
+  margin-top: 0px;
+  margin-bottom: -30px;
+}
+.grid .text-area .text-offset .text-offset-bg {
+  background: white;
+  padding: 0 16px;
+}
+.grid .text-area .text-offset.text-offset-first {
+  margin-top: 18px;
+}
+.grid .text-area .text-wrapper {
+  margin: 18px;
+  border: solid crimson 2px;
+}
+.grid .text-area .text-wrapper p {
+  margin: 18px;
   text-indent: 25px;
+  font-size: 18px;
 }
-.grid .text-area .center {
-  text-align: center !important;
+.grid .text-area .text-wrapper .center {
+  text-align: center;
   text-indent: 0;
 }
 .grid .links-area {
@@ -419,16 +442,19 @@ footer {
   right: -1px;
 }
 
-hr {
+.wtn {
   -o-border-image: linear-gradient(to right, rgba(220, 20, 60, 0), crimson, rgba(220, 20, 60, 0));
      border-image: linear-gradient(to right, rgba(220, 20, 60, 0), crimson, rgba(220, 20, 60, 0));
   border-image-slice: 1;
-  border-width: 1px 0;
-  width: 80%;
+  border-width: 1px 0 0 0;
+  width: 100%;
   margin: 8px auto;
-}
-
-.wtn {
   border-width: 2px 0;
   height: 8px;
+}
+
+.PM {
+  font-family: "Norwester";
+  font-style: normal;
+  font-weight: lighter;
 }

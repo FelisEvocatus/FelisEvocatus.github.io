@@ -146,9 +146,8 @@ footer {
 }
 footer .footer-text {
   color: white;
-  font-family: "SourceHanSerif";
+  font-family: "Railway";
   font-size: 16px;
-  font-weight: bold;
   margin: auto;
 }
 footer::before, footer::after {
@@ -294,11 +293,11 @@ footer {
   left: -1px;
 }
 .container-wrapper .container::before {
-  height: 41px;
+  height: 40px;
   clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
 }
 .container-wrapper .container::after {
-  height: 56px;
+  height: 54px;
   clip-path: polygon(87% 0%, 100% 0%, 0% 100%, 0% 87%);
 }
 .container-wrapper .container:hover {

@@ -7,9 +7,9 @@ $cursor-transition: 0.5s ease;
     width: $cursor;
     height: $cursor;
     transform: translate(-50%, -50%);
-    background: rgba(220, 20, 60, 0.6);
+    background: rgba(crimson, 0.6);
     border-radius: 50%;
-    border: 1px solid black;
+    border: 1px solid rgb(85, 18, 30);
     pointer-events: none;
     transition: height $cursor-transition, width $cursor-transition;
     z-index: 100000;
@@ -19,7 +19,7 @@ $cursor-transition: 0.5s ease;
 .hover-gallery {
     width: $cursor-hover;
     height: $cursor-hover;
-    background: rgb(220, 20, 60) !important;
+    background: rgba(crimson, 1) !important;
     mix-blend-mode: difference;
     border: 0px !important;
 }
