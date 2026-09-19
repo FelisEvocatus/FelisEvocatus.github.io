@@ -77,8 +77,11 @@ nav .navigation-wrapper .navigation-buttons-wrapper a {
   text-decoration: none;
   transition: 200ms cubic-bezier(0.65, 0.05, 0.36, 1);
   color: white;
-  min-width: 200px;
   width: 100%;
+  -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+     border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+  border-image-slice: 1;
+  border-image-width: 0px 0px 0px 3px;
 }
 nav .navigation-wrapper .navigation-buttons-wrapper a .nav-button {
   font-size: 48px;
@@ -94,37 +97,46 @@ nav .navigation-wrapper .navigation-buttons-wrapper a:hover .nav-button {
   text-decoration: underline !important;
 }
 nav .navigation-wrapper .navigation-buttons-wrapper .button-1 {
-  -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-     border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-  border-image-slice: 1;
-  border-image-width: 0 0 0 3px;
   grid-area: button-a;
 }
 nav .navigation-wrapper .navigation-buttons-wrapper .button-2 {
-  -o-border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-     border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-  border-image-slice: 1;
-  border-image-width: 0 0 0 3px;
   grid-area: button-b;
 }
 nav .navigation-wrapper .navigation-buttons-wrapper .button-active p {
   filter: drop-shadow(0px 0px 5px orange) drop-shadow(0px 0px 6px rgba(255, 179, 0, 0.5)) drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.4));
 }
-nav .navigation-wrapper .navigation-buttons-wrapper .button-active::before, nav .navigation-wrapper .navigation-buttons-wrapper .button-active::after {
+nav .navigation-wrapper .navigation-buttons-wrapper .button-active::before {
   content: "";
   position: absolute;
-  bottom: 0;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.5));
   height: 30px;
-  aspect-ratio: 1/1;
-}
-nav .navigation-wrapper .navigation-buttons-wrapper .button-active::before {
+  bottom: 0px;
+  right: 0px;
   left: 3px;
-  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.5));
+  clip-path: polygon(0% 0%, 0% 110%, 100% 110%, 100% 0%, 75% 100%, 25% 100%);
 }
-nav .navigation-wrapper .navigation-buttons-wrapper .button-active::after {
-  right: 0;
-  clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+nav .navigation-wrapper .navigation-buttons-wrapper .button-active {
+  /*
+  &::before,
+  &::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.5));
+      height: 30px;
+      aspect-ratio: 1/1;
+  }
+
+  &::before {
+      left: 3px;
+      clip-path: polygon(0% 0%, 100% 100%, 0% 100%)
+  }
+
+  &::after {
+      right: 0px;
+      clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
+  }
+  */
 }
 
 .button-active .button-2::before {
@@ -170,8 +182,8 @@ footer::after {
 /*Additional borders*/
 nav {
   border-bottom: 3px solid transparent;
-  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-     border-image: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 48px, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 40% 100%);
+     border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 48px, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 40% 100%);
   border-image-slice: 1;
 }
 

@@ -94,8 +94,11 @@ nav {
                 text-decoration: none;
                 transition: 200ms cubic-bezier(.65, .05, .36, 1);
                 color: $secondary_colour;
-                min-width: 200px;
                 width: 100%;
+
+                border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+                border-image-slice: 1;
+                border-image-width: 0px 0px 0px 3px;
 
                 .nav-button {
                     font-size: 48px;
@@ -115,19 +118,11 @@ nav {
             }
 
             .button-1 {
-                border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-                border-image-slice: 1;
-                border-image-width: 0 0 0 3px;
-
                 grid-area: button-a
             }
 
             .button-2 {
-                border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
-                border-image-slice: 1;
-                border-image-width: 0 0 0 3px;
-
-                grid-area: button-b
+                grid-area: button-b;
             }
 
             .button-active {
@@ -136,11 +131,28 @@ nav {
                     filter: drop-shadow(0px 0px 5px orange) drop-shadow(0px 0px 6px rgba(255, 179, 0, 0.5)) drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.4))
                 }
 
+                &::before {
+                    content: "";
+                    position: absolute;
+
+                    $clip-triangles: 30px;
+
+                    height: $clip-triangles;
+                    bottom: 0px;
+                    right: 0px;
+                    left: 3px;
+                    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.5));
+
+
+                    clip-path: polygon(0% 0%, 0% 110%, 100% 110%, 100% 0%, 75% 100%, 25% 100%);
+                }
+
+                /*
                 &::before,
                 &::after {
                     content: "";
                     position: absolute;
-                    bottom: 0;
+                    bottom: 0px;
                     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.5));
                     height: 30px;
                     aspect-ratio: 1/1;
@@ -152,9 +164,10 @@ nav {
                 }
 
                 &::after {
-                    right: 0;
+                    right: 0px;
                     clip-path: polygon(0% 100%, 100% 0%, 100% 100%)
                 }
+                */
             }
         }
     }
@@ -212,7 +225,7 @@ footer {
 
 nav {
     border-bottom: 3px solid transparent;
-    border-image: linear-gradient(to right, rgba(black, 0.1), rgba(black, 0.5), rgba(black, 0.5));
+    border-image: linear-gradient(to right, rgba(black, 0.5) 48px, rgba(black, 0.1), rgba(black, 0.5) 40% 100%);
     border-image-slice: 1;
 }
 

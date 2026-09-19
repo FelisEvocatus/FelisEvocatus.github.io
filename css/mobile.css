@@ -33,8 +33,8 @@
     grid-template-areas: "a b" "c d" !important;
   }
   nav {
-    -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) !important;
-       border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) !important;
+    -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0% 15%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 45% 55%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 85% 100%) !important;
+       border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0% 15%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 45% 55%, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 85% 100%) !important;
     border-image-slice: 1 !important;
   }
   /*----------Gears----------*/
