@@ -89,14 +89,12 @@
     animation-fill-mode: backwards !important;
     animation-delay: 0.5s !important;
   }
-  .container::before, .container::after {
+  .container::before {
+    height: 20px !important;
     left: 0px !important;
   }
-  .container::before {
-    height: 20px;
-  }
   .container::after {
-    height: 30px;
+    display: none !important;
   }
   .container-wrapper {
     padding: 4rem 6rem !important;

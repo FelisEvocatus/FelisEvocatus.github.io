@@ -12,6 +12,14 @@ nav {
   grid-template-columns: repeat(5, minmax(0, 1fr));
   z-index: 100;
 }
+nav .navigation-wrapper {
+  position: relative;
+  display: flex;
+  font-family: "Norwester";
+  color: white;
+  width: 100%;
+  height: 100%;
+}
 nav .nav-left {
   grid-area: a;
 }
@@ -49,19 +57,10 @@ nav .nav-left .logo-wrapper .title {
   text-align: left;
   font-size: 38px;
 }
-nav .nav-right {
+nav .nav-buttons {
   grid-area: b;
 }
-nav .navigation-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  font-family: "Norwester";
-  color: white;
-  width: 100%;
-  height: 100%;
-}
-nav .navigation-wrapper .navigation-buttons-wrapper {
+nav .nav-buttons .navigation-buttons-wrapper {
   position: relative;
   display: grid;
   /*Number of buttons*/
@@ -70,7 +69,7 @@ nav .navigation-wrapper .navigation-buttons-wrapper {
   width: 100%;
   height: 100%;
 }
-nav .navigation-wrapper .navigation-buttons-wrapper a {
+nav .nav-buttons .navigation-buttons-wrapper a {
   display: flex;
   justify-content: center;
   position: relative;
@@ -83,39 +82,39 @@ nav .navigation-wrapper .navigation-buttons-wrapper a {
   border-image-slice: 1;
   border-image-width: 0px 0px 0px 3px;
 }
-nav .navigation-wrapper .navigation-buttons-wrapper a .nav-button {
+nav .nav-buttons .navigation-buttons-wrapper a .nav-button {
   font-size: 48px;
   margin: auto;
 }
-nav .navigation-wrapper .navigation-buttons-wrapper a:hover {
+nav .nav-buttons .navigation-buttons-wrapper a:hover {
   background-color: black;
   transition: background-color 0s;
 }
-nav .navigation-wrapper .navigation-buttons-wrapper a:hover .nav-button {
+nav .nav-buttons .navigation-buttons-wrapper a:hover .nav-button {
   color: crimson;
   filter: drop-shadow(0px 0px 5px rgba(220, 20, 60, 0.6));
   text-decoration: underline !important;
 }
-nav .navigation-wrapper .navigation-buttons-wrapper .button-1 {
+nav .nav-buttons .navigation-buttons-wrapper .button-1 {
   grid-area: button-a;
 }
-nav .navigation-wrapper .navigation-buttons-wrapper .button-2 {
+nav .nav-buttons .navigation-buttons-wrapper .button-2 {
   grid-area: button-b;
 }
-nav .navigation-wrapper .navigation-buttons-wrapper .button-active p {
+nav .nav-buttons .navigation-buttons-wrapper .button-active p {
   filter: drop-shadow(0px 0px 5px orange) drop-shadow(0px 0px 6px rgba(255, 179, 0, 0.5)) drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.4));
 }
-nav .navigation-wrapper .navigation-buttons-wrapper .button-active::before {
+nav .nav-buttons .navigation-buttons-wrapper .button-active::before {
   content: "";
   position: absolute;
-  height: 30px;
   bottom: 0px;
   right: 0px;
   left: 3px;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.5));
+  height: 30px;
   clip-path: polygon(0% 0%, 0% 110%, 100% 110%, 100% 0%, 75% 100%, 25% 100%);
 }
-nav .navigation-wrapper .navigation-buttons-wrapper .button-active {
+nav .nav-buttons .navigation-buttons-wrapper .button-active {
   /*
   &::before,
   &::after {
@@ -288,7 +287,6 @@ footer {
   max-width: 1925px;
   border-width: 4px;
   border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
   animation-name: opacity-keyframes, container-border-keyframes;
   animation-duration: 1.5s, 1.2s;
   animation-timing-function: ease-in-out, ease-in-out;
@@ -309,8 +307,14 @@ footer {
   clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
 }
 .container-wrapper .container::after {
-  height: 54px;
-  clip-path: polygon(87% 0%, 100% 0%, 0% 100%, 0% 87%);
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 10px;
+  background-color: rgba(220, 20, 60, 0.1);
+  left: 0;
+  top: 0;
+  bottom: 0;
 }
 .container-wrapper .container:hover {
   clip-path: none;
@@ -385,10 +389,8 @@ footer {
 @keyframes container-border-keyframes {
   from {
     border-top-right-radius: 0px;
-    border-bottom-left-radius: 0px;
   }
   to {
     border-top-right-radius: 40px;
-    border-bottom-left-radius: 40px;
   }
 }

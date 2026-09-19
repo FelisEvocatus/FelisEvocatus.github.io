@@ -123,17 +123,13 @@
         animation-fill-mode: backwards !important;
         animation-delay: 0.5s !important;
 
-        &::before,
-        &::after {
+        &::before {
+            height: 20px !important;
             left: 0px !important;
         }
 
-        &::before {
-            height: 20px;
-        }
-
         &::after {
-            height: 30px;
+            display: none !important;
         }
     }
 
