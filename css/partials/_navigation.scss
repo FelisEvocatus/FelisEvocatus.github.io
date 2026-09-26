@@ -6,7 +6,6 @@
 
 nav {
     position: relative;
-    background-color: $main_colour;
     display: grid;
     align-items: center;
     padding: 0 $distance+$width;
@@ -189,7 +188,6 @@ footer {
     position: relative;
     width: 100%;
     z-index: 100;
-    background-color: $main_colour;
     align-self: center;
 
     .footer-text {
@@ -225,11 +223,16 @@ footer {
 nav {
     border-bottom: 3px solid transparent;
     border-image: linear-gradient(to right, rgba(black, 0.5) 48px, rgba(black, 0.1), rgba(black, 0.5) 40% 100%);
-    border-image-slice: 1;
 }
 
 footer {
     border-top: 3px solid transparent;
     border-image: linear-gradient(to right, rgba(black, 0.5), rgba(black, 0.1), rgba(black, 0.5));
+}
+
+nav,
+footer {
+    background-color: rgba($main_colour, 1);
     border-image-slice: 1;
+    overflow: hidden;
 }

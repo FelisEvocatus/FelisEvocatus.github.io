@@ -3,7 +3,6 @@
 /*--------*/
 nav {
   position: relative;
-  background-color: crimson;
   display: grid;
   align-items: center;
   padding: 0 48px;
@@ -152,7 +151,6 @@ footer {
   position: relative;
   width: 100%;
   z-index: 100;
-  background-color: crimson;
   align-self: center;
 }
 footer .footer-text {
@@ -183,14 +181,19 @@ nav {
   border-bottom: 3px solid transparent;
   -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 48px, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 40% 100%);
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 48px, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 40% 100%);
-  border-image-slice: 1;
 }
 
 footer {
   border-top: 3px solid transparent;
   -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+nav,
+footer {
+  background-color: crimson;
   border-image-slice: 1;
+  overflow: hidden;
 }
 
 /*----------------*/
@@ -300,10 +303,11 @@ footer {
 .grid .index-grid-element:hover {
   background-color: rgb(255, 255, 255) !important;
   clip-path: polygon(-50% -50%, 150% -50%, 150% 150%, -50% 150%);
+  /*
   filter: drop-shadow(rgba(255, 42, 85, 0.4) 0px 0px 6px) !important;
   transition-property: filter;
   transition-delay: 0.2s;
-  transition-duration: 1s;
+  transition-duration: 1s;*/
 }
 .grid .index-grid-element::before {
   content: "";

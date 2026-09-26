@@ -3,7 +3,6 @@
 /*--------*/
 nav {
   position: relative;
-  background-color: crimson;
   display: grid;
   align-items: center;
   padding: 0 48px;
@@ -152,7 +151,6 @@ footer {
   position: relative;
   width: 100%;
   z-index: 100;
-  background-color: crimson;
   align-self: center;
 }
 footer .footer-text {
@@ -183,14 +181,19 @@ nav {
   border-bottom: 3px solid transparent;
   -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 48px, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 40% 100%);
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 48px, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5) 40% 100%);
-  border-image-slice: 1;
 }
 
 footer {
   border-top: 3px solid transparent;
   -o-border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
      border-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+nav,
+footer {
+  background-color: crimson;
   border-image-slice: 1;
+  overflow: hidden;
 }
 
 /*----------------*/
