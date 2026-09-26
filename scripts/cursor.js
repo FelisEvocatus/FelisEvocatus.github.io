@@ -5,10 +5,10 @@ body.onmousemove = function (e) {
   cursor.style.top = e.clientY + "px";
   cursor.style.left = e.clientX + "px";
   if (e.target.dataset.mouse == "active") {
-    cursor.className = "cursor hover";
+    cursor.className = "cursor hover-small";
   }
   if (e.target.dataset.mouse == "gallery") {
-    cursor.className = "cursor hover-gallery";
+    cursor.className = "cursor hover-big";
   }
   if (e.target.dataset.mouse == null) {
     cursor.className = "cursor";
