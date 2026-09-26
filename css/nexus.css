@@ -284,7 +284,7 @@ footer {
   box-sizing: border-box;
   margin: auto;
 }
-.grid div {
+.grid .index-grid-element {
   background-color: rgba(255, 255, 255, 0.8);
   position: relative;
   text-align: center;
@@ -297,7 +297,7 @@ footer {
   transition-delay: 0.25s, 0s;
   transition-duration: 0.5s, 0.5s;
 }
-.grid div:hover {
+.grid .index-grid-element:hover {
   background-color: rgb(255, 255, 255) !important;
   clip-path: polygon(-50% -50%, 150% -50%, 150% 150%, -50% 150%);
   filter: drop-shadow(rgba(255, 42, 85, 0.4) 0px 0px 6px) !important;
@@ -305,7 +305,7 @@ footer {
   transition-delay: 0.2s;
   transition-duration: 1s;
 }
-.grid div::before {
+.grid .index-grid-element::before {
   content: "";
   position: absolute;
   background-color: crimson;
