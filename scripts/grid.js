@@ -1,8 +1,9 @@
 let magicGrid = new MagicGrid({
     container: '.container',
-    animate: false,
+    animate: true,
     useTransform: true,
     static: true,
+    center: true,
     gutter: 30,
 });
 

@@ -18,8 +18,8 @@
         grid-template-areas:
             "a a"
             "b c";
+
         max-width: 75rem;
-        width: 100%;
 
         gap: 1rem;
         justify-content: stretch;
@@ -67,7 +67,7 @@
             box-sizing: border-box;
 
             .nexus {
-                font-size: 54px;
+                font-size: 50px;
                 color: black;
                 font-family: 'Norwester';
                 margin: 8px auto;
@@ -135,7 +135,7 @@
                 p {
                     margin: 18px;
                     text-indent: 25px;
-                    font-size: 18px;
+                    font-size: 16px;
                 }
 
                 .center {
@@ -146,12 +146,28 @@
                 $poly_hollow: 25px;
 
                 &.text-wrapper-1 {
-                    clip-path: polygon(0 0, calc(50% - $poly_hollow) 0, calc(50% - $poly_hollow) 2%, calc(50% + $poly_hollow) 2%, calc(50% + $poly_hollow) 0, 100% 0, 100% 100%, 0 100%);
+                    clip-path:
+                        polygon(-5% -5%,
+                            calc(50% - $poly_hollow) 0,
+                            calc(50% - $poly_hollow) 2%,
+                            calc(50% + $poly_hollow) 2%,
+                            calc(50% + $poly_hollow) 0,
+                            105% -5%,
+                            105% 105%,
+                            -5% 105%);
                 }
 
                 &.text-wrapper-2 {
                     $poly_hollow_2: $poly_hollow - 5px;
-                    clip-path: polygon(0 0, calc(50% - $poly_hollow_2) 0, calc(50% - $poly_hollow_2) 2%, calc(50% + $poly_hollow_2) 2%, calc(50% + $poly_hollow_2) 0, 100% 0, 100% 100%, 0 100%);
+                    clip-path:
+                        polygon(-5% -5%,
+                            calc(50% - $poly_hollow_2) 0,
+                            calc(50% - $poly_hollow_2) 2%,
+                            calc(50% + $poly_hollow_2) 2%,
+                            calc(50% + $poly_hollow_2) 0,
+                            105% -5%,
+                            105% 105%,
+                            -5% 105%);
                 }
             }
         }
@@ -163,11 +179,13 @@
             display: grid;
             width: 100%;
             gap: 24px;
-            box-sizing: border-box;
+
             grid-template-areas:
                 "a a"
                 "b b"
                 "c d";
+
+            align-content: center;
 
             .smg-a {
                 grid-area: a;
@@ -183,7 +201,6 @@
 
             a {
                 display: flex;
-                justify-content: center;
                 position: relative;
 
                 border-width: 2px;
@@ -194,10 +211,12 @@
                 clip-path: polygon(20px 0%, 100% 0%, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0% 100%, 0% 20px);
 
                 .links {
-                    min-height: 80px;
-                    max-height: 130px;
+                    max-height: 100px;
+
                     height: 100%;
-                    margin: 24px;
+                    margin: auto;
+                    padding: 20px;
+
                     transition: all 0.5s;
                 }
 

@@ -29,8 +29,8 @@
     width: $width + 8px;
 }
 
-$dec_nav_height: 86px;
-$dec_footer_height: 51px;
+$dec_nav_height: 79px;
+$dec_footer_height: 45px;
 
 .dec_n {
     top: 0;
@@ -63,7 +63,7 @@ $dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
 .dec_n_short::before {
     background-image: linear-gradient(to bottom, $dec_gradient);
     min-height: 300px;
-    height: 30vh;
+    height: 25vh;
     top: $dec_nav_height;
 }
 
@@ -77,6 +77,6 @@ $dec_gradient: rgb(0, 0, 0, 0.2), rgba(0, 0, 0, 0);
 .dec_f_short::before {
     background-image: linear-gradient(to top, $dec_gradient);
     min-height: 300px;
-    height: 30vh;
+    height: 25vh;
     bottom: $dec_footer_height;
 }
