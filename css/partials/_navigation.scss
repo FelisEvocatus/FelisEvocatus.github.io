@@ -142,7 +142,7 @@ nav {
                     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.34), rgba(0, 0, 0, 0.5));
 
                     height: $clip-triangles;
-                    clip-path: polygon(0% 0%, 0% 110%, 100% 110%, 100% 0%, 75% 100%, 25% 100%);
+                    clip-path: polygon(5% 0%, -10% 0%, -10% 110%, 110% 110%, 110% 0%, 95% 0%, 75% 100%, 25% 100%);
                 }
 
                 /*
