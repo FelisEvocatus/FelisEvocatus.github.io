@@ -158,6 +158,8 @@ footer {
   z-index: 100;
   align-self: center;
   margin-top: auto;
+  margin-bottom: 0;
+  bottom: 0;
 }
 footer .footer-text {
   color: white;
