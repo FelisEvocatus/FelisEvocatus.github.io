@@ -9,7 +9,7 @@
 .grid-wrapper {
     display: flex;
     padding: 4rem;
-    margin: auto 0;
+    margin-top: auto;
     position: relative;
 
     .grid {
@@ -19,7 +19,7 @@
             "a a"
             "b c";
 
-        max-width: 75rem;
+        max-width: 65rem;
 
         gap: 1rem;
         justify-content: stretch;
@@ -130,10 +130,11 @@
 
             .text-wrapper {
                 margin: 18px;
+                padding: 10px;
                 border: solid crimson 2px;
 
                 p {
-                    margin: 18px;
+                    margin: 6px;
                     text-indent: 25px;
                     font-size: 16px;
                 }
@@ -174,11 +175,11 @@
 
         .links-area {
             box-sizing: border-box;
-            padding: 24px;
+            padding: 20px;
             position: relative;
             display: grid;
             width: 100%;
-            gap: 24px;
+            gap: 20px;
 
             grid-template-areas:
                 "a a"

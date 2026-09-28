@@ -157,6 +157,7 @@ footer {
   width: 100%;
   z-index: 100;
   align-self: center;
+  margin-top: auto;
 }
 footer .footer-text {
   color: white;
@@ -282,14 +283,14 @@ footer {
 .grid-wrapper {
   display: flex;
   padding: 4rem;
-  margin: auto 0;
+  margin-top: auto;
   position: relative;
 }
 .grid-wrapper .grid {
   position: relative;
   display: grid;
   grid-template-areas: "a a" "b c";
-  max-width: 75rem;
+  max-width: 65rem;
   gap: 1rem;
   justify-content: stretch;
   align-items: stretch;
@@ -376,10 +377,11 @@ footer {
 }
 .grid-wrapper .grid .text-area .text-wrapper {
   margin: 18px;
+  padding: 10px;
   border: solid crimson 2px;
 }
 .grid-wrapper .grid .text-area .text-wrapper p {
-  margin: 18px;
+  margin: 6px;
   text-indent: 25px;
   font-size: 16px;
 }
@@ -395,11 +397,11 @@ footer {
 }
 .grid-wrapper .grid .links-area {
   box-sizing: border-box;
-  padding: 24px;
+  padding: 20px;
   position: relative;
   display: grid;
   width: 100%;
-  gap: 24px;
+  gap: 20px;
   grid-template-areas: "a a" "b b" "c d";
   align-content: center;
 }
