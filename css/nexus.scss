@@ -8,9 +8,9 @@
 
 .grid-wrapper {
     display: flex;
-    padding: 4rem;
-    margin-top: auto;
+    margin: auto;
     position: relative;
+    width: 100%;
 
     .grid {
         position: relative;
@@ -25,7 +25,9 @@
         justify-content: stretch;
         align-items: stretch;
         box-sizing: border-box;
-        margin: auto;
+
+        margin: 0 auto;
+        padding: 4rem;
 
         .index-grid-element {
             background-color: rgba(255, 255, 255, 0.8);
@@ -134,8 +136,8 @@
                 border: solid crimson 2px;
 
                 p {
-                    margin: 6px;
-                    text-indent: 25px;
+                    margin: 8px;
+                    text-indent: 24px;
                     font-size: 16px;
                 }
 

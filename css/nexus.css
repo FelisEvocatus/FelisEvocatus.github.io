@@ -10,6 +10,7 @@ nav {
   grid-template-areas: "a a b b b";
   grid-template-columns: repeat(5, minmax(0, 1fr));
   z-index: 100;
+  margin-bottom: auto;
 }
 nav .navigation-wrapper {
   position: relative;
@@ -284,9 +285,9 @@ footer {
 /*----------*/
 .grid-wrapper {
   display: flex;
-  padding: 4rem;
-  margin-top: auto;
+  margin: auto;
   position: relative;
+  width: 100%;
 }
 .grid-wrapper .grid {
   position: relative;
@@ -297,7 +298,8 @@ footer {
   justify-content: stretch;
   align-items: stretch;
   box-sizing: border-box;
-  margin: auto;
+  margin: 0 auto;
+  padding: 4rem;
 }
 .grid-wrapper .grid .index-grid-element {
   background-color: rgba(255, 255, 255, 0.8);
@@ -383,8 +385,8 @@ footer {
   border: solid crimson 2px;
 }
 .grid-wrapper .grid .text-area .text-wrapper p {
-  margin: 6px;
-  text-indent: 25px;
+  margin: 8px;
+  text-indent: 24px;
   font-size: 16px;
 }
 .grid-wrapper .grid .text-area .text-wrapper .center {
